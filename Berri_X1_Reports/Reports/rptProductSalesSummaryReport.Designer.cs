@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptProductSalesSummaryReport));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
+            this.lblSubCategory = new System.Windows.Forms.Label();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.lblReportType = new System.Windows.Forms.Label();
             this.rbtnBoth = new System.Windows.Forms.RadioButton();
@@ -56,8 +58,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
-            this.lblSubCategory = new System.Windows.Forms.Label();
-            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -92,8 +92,29 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1384, 127);
+            this.pnlTop.Size = new System.Drawing.Size(1347, 127);
             this.pnlTop.TabIndex = 12;
+            // 
+            // cmbSubCategory
+            // 
+            this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSubCategory.FormattingEnabled = true;
+            this.cmbSubCategory.Location = new System.Drawing.Point(624, 93);
+            this.cmbSubCategory.Name = "cmbSubCategory";
+            this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
+            this.cmbSubCategory.TabIndex = 175;
+            // 
+            // lblSubCategory
+            // 
+            this.lblSubCategory.AutoSize = true;
+            this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
+            this.lblSubCategory.Location = new System.Drawing.Point(528, 93);
+            this.lblSubCategory.Name = "lblSubCategory";
+            this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
+            this.lblSubCategory.TabIndex = 174;
+            this.lblSubCategory.Text = "Sub-Category";
             // 
             // cmbReportType
             // 
@@ -335,7 +356,7 @@
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdData.Location = new System.Drawing.Point(0, 127);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1384, 634);
+            this.grdData.Size = new System.Drawing.Size(1347, 613);
             this.grdData.TabIndex = 13;
             // 
             // pnlBottom
@@ -345,9 +366,9 @@
             this.pnlBottom.Controls.Add(this.btnPrint);
             this.pnlBottom.Controls.Add(this.btnView);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 716);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 695);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1384, 45);
+            this.pnlBottom.Size = new System.Drawing.Size(1347, 45);
             this.pnlBottom.TabIndex = 14;
             // 
             // btnFilter
@@ -355,7 +376,7 @@
             this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.Location = new System.Drawing.Point(963, 5);
+            this.btnFilter.Location = new System.Drawing.Point(926, 5);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 37);
             this.btnFilter.TabIndex = 5;
@@ -368,7 +389,7 @@
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1281, 5);
+            this.btnClose.Location = new System.Drawing.Point(1244, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 37);
             this.btnClose.TabIndex = 4;
@@ -381,7 +402,7 @@
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(1069, 5);
+            this.btnPrint.Location = new System.Drawing.Point(1032, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 37);
             this.btnPrint.TabIndex = 3;
@@ -394,7 +415,7 @@
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnView.Location = new System.Drawing.Point(1175, 5);
+            this.btnView.Location = new System.Drawing.Point(1138, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 37);
             this.btnView.TabIndex = 0;
@@ -402,32 +423,11 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // lblSubCategory
-            // 
-            this.lblSubCategory.AutoSize = true;
-            this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblSubCategory.Location = new System.Drawing.Point(528, 93);
-            this.lblSubCategory.Name = "lblSubCategory";
-            this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
-            this.lblSubCategory.TabIndex = 174;
-            this.lblSubCategory.Text = "Sub-Category";
-            // 
-            // cmbSubCategory
-            // 
-            this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSubCategory.FormattingEnabled = true;
-            this.cmbSubCategory.Location = new System.Drawing.Point(624, 93);
-            this.cmbSubCategory.Name = "cmbSubCategory";
-            this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
-            this.cmbSubCategory.TabIndex = 175;
-            // 
             // rptProductSalesSummaryReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.ClientSize = new System.Drawing.Size(1347, 740);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
