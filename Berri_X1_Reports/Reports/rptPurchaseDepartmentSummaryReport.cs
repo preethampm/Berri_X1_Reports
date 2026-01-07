@@ -80,7 +80,6 @@ namespace Berri_X1_Reports.Reports
                     new SqlParameter("@todate", dtpTo.Value.Date),
                     new SqlParameter("@report", cmbReportType.Text),
                     new SqlParameter("@division", cmbDivision.Text),
-                    //new SqlParameter("@branchname", txtBranches.Text)
     
                 };
                 sqlCommand.Parameters.AddRange(values);
