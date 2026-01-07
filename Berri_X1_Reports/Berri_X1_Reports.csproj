@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CRReports\" />
+    <Folder Include="SP\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
