@@ -50,20 +50,35 @@ namespace Berri_X1_Reports.Reports
             int counterId = 0;
             int.TryParse(txtShift.Text.Trim(), out shiftId);
             int.TryParse(txtCounter.Text.Trim(), out counterId);
+
+            if (!rbtnSummary.Checked && !rbtnDetailed.Checked)
+            {
+                MessageBox.Show("Please select either Summary or Detailed report type.");
+                return;
+            }
+            string procedureName = "";
+            if (rbtnSummary.Checked)
+            {
+                procedureName = "psp_REPORT_PERIODIC_SALES_SUMMARY";
+            }
+            else
+            {
+                procedureName = "psp_REPORT_PERIODIC_SALES_DETAILED";
+            }
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
                 sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand("psp_REPORT_PERIODIC_SALES", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand(procedureName, sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 SqlParameter[] values =
                 {
-                    new SqlParameter("@branchids", dtBrnids),
-                    new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                    new SqlParameter("@todate", dtpTo.Value.Date),
-                    new SqlParameter("@shiftid", shiftId),
-                    new SqlParameter("@counterid", counterId)
-                };
+                new SqlParameter("@branchids", dtBrnids),
+                new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                new SqlParameter("@todate", dtpTo.Value.Date),
+                new SqlParameter("@shiftid", shiftId),
+                new SqlParameter("@counterid", counterId)
+            };
                 sqlCommand.Parameters.AddRange(values);
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -137,7 +152,8 @@ namespace Berri_X1_Reports.Reports
             DataTable dtrpt = dtPeriodic.Copy();
             dtrpt.TableName = "dtPeriodic";
             dsReport.Tables.Add(dtrpt);
-            Common_View.Reporintg.PrintReport(dsReport, "PeriodicSales", 1, true);
+            string reportName = rbtnSummary.Checked ? "CRrptPeriodicSalesSummary" : "CRrptPeriodicSalesDetailed";
+            Common_View.Reporintg.PrintReport(dsReport, reportName  , 1, true);
         }
     }
 }
