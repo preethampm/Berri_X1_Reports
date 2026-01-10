@@ -59,47 +59,6 @@ namespace Berri_X1_Reports
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-        }
-
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rptPurchaseReports rptprch = new rptPurchaseReports();
@@ -229,13 +188,13 @@ namespace Berri_X1_Reports
         //    rptset.Show();
         //}
 
-        private void partyMasterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            rptPartyMaster rptpm = new rptPartyMaster();
-            rptpm.MdiParent = this;
-            rptpm.StartPosition = FormStartPosition.CenterParent;   
-            rptpm.Show();
-        }
+        //private void partyMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    rptPartyMaster rptpm = new rptPartyMaster();
+        //    rptpm.MdiParent = this;
+        //    rptpm.StartPosition = FormStartPosition.CenterParent;   
+        //    rptpm.Show();
+        //}
 
         //private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
         //{
@@ -245,13 +204,13 @@ namespace Berri_X1_Reports
         //    rptdaily.Show();
         //}
 
-        private void itemDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            rptItemDetails rptitemdetails = new rptItemDetails();
-            rptitemdetails.MdiParent = this;
-            rptitemdetails.StartPosition = FormStartPosition.CenterParent; 
-            rptitemdetails.Show();
-        }
+        //private void itemDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    rptItemDetails rptitemdetails = new rptItemDetails();
+        //    rptitemdetails.MdiParent = this;
+        //    rptitemdetails.StartPosition = FormStartPosition.CenterParent; 
+        //    rptitemdetails.Show();
+        //}
 
         private void supplierProductListToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -301,6 +260,14 @@ namespace Berri_X1_Reports
             rptProductSales.MdiParent = this;
             rptProductSales.StartPosition = FormStartPosition.CenterParent;
             rptProductSales.Show();
+        }
+
+        private void periodicSalesReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptPeriodicSalesReport rptPeriodicSales = new rptPeriodicSalesReport();
+            rptPeriodicSales.MdiParent = this;
+            rptPeriodicSales.StartPosition = FormStartPosition.CenterParent;
+            rptPeriodicSales.Show();
         }
     }
 }

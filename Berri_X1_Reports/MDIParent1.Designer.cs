@@ -35,8 +35,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierProductListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productSalesDivisonWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +44,7 @@
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.periodicSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,11 +82,10 @@
             // 
             this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testToolStripMenuItem,
-            this.partyMasterToolStripMenuItem,
-            this.itemDetailsToolStripMenuItem,
             this.supplierProductListToolStripMenuItem,
             this.productSalesDivisonWiseToolStripMenuItem,
-            this.dailyToolStripMenuItem});
+            this.dailyToolStripMenuItem,
+            this.periodicSalesReportToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -100,25 +98,11 @@
             this.testToolStripMenuItem.Text = "Test";
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
-            // partyMasterToolStripMenuItem
-            // 
-            this.partyMasterToolStripMenuItem.Name = "partyMasterToolStripMenuItem";
-            this.partyMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.partyMasterToolStripMenuItem.Text = "Party Master";
-            this.partyMasterToolStripMenuItem.Click += new System.EventHandler(this.partyMasterToolStripMenuItem_Click);
-            // 
-            // itemDetailsToolStripMenuItem
-            // 
-            this.itemDetailsToolStripMenuItem.Name = "itemDetailsToolStripMenuItem";
-            this.itemDetailsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.itemDetailsToolStripMenuItem.Text = "Item Details";
-            this.itemDetailsToolStripMenuItem.Click += new System.EventHandler(this.itemDetailsToolStripMenuItem_Click);
-            // 
             // supplierProductListToolStripMenuItem
             // 
             this.supplierProductListToolStripMenuItem.Name = "supplierProductListToolStripMenuItem";
             this.supplierProductListToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.supplierProductListToolStripMenuItem.Text = "Supplier - Product List";
+            this.supplierProductListToolStripMenuItem.Text = "Product List";
             this.supplierProductListToolStripMenuItem.Click += new System.EventHandler(this.supplierProductListToolStripMenuItem_Click);
             // 
             // productSalesDivisonWiseToolStripMenuItem
@@ -134,14 +118,14 @@
             // withGPToolStripMenuItem
             // 
             this.withGPToolStripMenuItem.Name = "withGPToolStripMenuItem";
-            this.withGPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.withGPToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.withGPToolStripMenuItem.Text = "With GP";
             this.withGPToolStripMenuItem.Click += new System.EventHandler(this.withGPToolStripMenuItem_Click);
             // 
             // withoutGPToolStripMenuItem
             // 
             this.withoutGPToolStripMenuItem.Name = "withoutGPToolStripMenuItem";
-            this.withoutGPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.withoutGPToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.withoutGPToolStripMenuItem.Text = "Without GP";
             this.withoutGPToolStripMenuItem.Click += new System.EventHandler(this.withoutGPToolStripMenuItem_Click);
             // 
@@ -179,6 +163,13 @@
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
             // 
+            // periodicSalesReportToolStripMenuItem
+            // 
+            this.periodicSalesReportToolStripMenuItem.Name = "periodicSalesReportToolStripMenuItem";
+            this.periodicSalesReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.periodicSalesReportToolStripMenuItem.Text = "Periodic Sales Report";
+            this.periodicSalesReportToolStripMenuItem.Click += new System.EventHandler(this.periodicSalesReportToolStripMenuItem_Click);
+            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,14 +202,13 @@
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mISToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem partyMasterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem itemDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierProductListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseDepartmentReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productSalesDivisonWiseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dailyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem withGPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem withoutGPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem periodicSalesReportToolStripMenuItem;
     }
 }
 

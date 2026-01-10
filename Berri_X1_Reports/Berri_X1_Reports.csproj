@@ -104,17 +104,23 @@
     <Compile Include="Reports\rptDailySalesReport.Designer.cs">
       <DependentUpon>rptDailySalesReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptItemDetails.cs">
+    <Compile Include="Not used\rptItemDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\rptItemDetails.Designer.cs">
+    <Compile Include="Not used\rptItemDetails.Designer.cs">
       <DependentUpon>rptItemDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptPartyMaster.cs">
+    <Compile Include="Not used\rptPartyMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\rptPartyMaster.Designer.cs">
+    <Compile Include="Not used\rptPartyMaster.Designer.cs">
       <DependentUpon>rptPartyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptPeriodicSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPeriodicSalesReport.Designer.cs">
+      <DependentUpon>rptPeriodicSalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\rptProductList.cs">
       <SubType>Form</SubType>
@@ -155,11 +161,14 @@
     <EmbeddedResource Include="Reports\rptDailySalesReport.resx">
       <DependentUpon>rptDailySalesReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptItemDetails.resx">
+    <EmbeddedResource Include="Not used\rptItemDetails.resx">
       <DependentUpon>rptItemDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptPartyMaster.resx">
+    <EmbeddedResource Include="Not used\rptPartyMaster.resx">
       <DependentUpon>rptPartyMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPeriodicSalesReport.resx">
+      <DependentUpon>rptPeriodicSalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptProductList.resx">
       <DependentUpon>rptProductList.cs</DependentUpon>

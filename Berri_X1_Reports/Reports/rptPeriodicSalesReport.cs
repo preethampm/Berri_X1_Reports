@@ -58,11 +58,11 @@ namespace Berri_X1_Reports.Reports
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 SqlParameter[] values =
                 {
-                    //new SqlParameter("@branchids", dtBrnids),   
-                    //new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                    //new SqlParameter("@todate", dtpTo.Value.Date),
-                    //new SqlParameter("@shiftid", shiftId),
-                    //new SqlParameter("@counterid", counterId)
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                    new SqlParameter("@todate", dtpTo.Value.Date),
+                    new SqlParameter("@shiftid", shiftId),
+                    new SqlParameter("@counterid", counterId)
                 };
                 sqlCommand.Parameters.AddRange(values);
 
