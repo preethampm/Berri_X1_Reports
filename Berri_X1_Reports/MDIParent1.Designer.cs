@@ -40,11 +40,11 @@
             this.withGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withoutGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.periodicSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purhaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.periodicSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +136,13 @@
             this.dailyToolStripMenuItem.Text = "Daily Sales Report";
             this.dailyToolStripMenuItem.Click += new System.EventHandler(this.dailyToolStripMenuItem_Click);
             // 
+            // periodicSalesReportToolStripMenuItem
+            // 
+            this.periodicSalesReportToolStripMenuItem.Name = "periodicSalesReportToolStripMenuItem";
+            this.periodicSalesReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.periodicSalesReportToolStripMenuItem.Text = "Periodic Sales Report";
+            this.periodicSalesReportToolStripMenuItem.Click += new System.EventHandler(this.periodicSalesReportToolStripMenuItem_Click);
+            // 
             // purhaseToolStripMenuItem
             // 
             this.purhaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -162,13 +169,6 @@
             this.mISToolStripMenuItem.Name = "mISToolStripMenuItem";
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
-            // 
-            // periodicSalesReportToolStripMenuItem
-            // 
-            this.periodicSalesReportToolStripMenuItem.Name = "periodicSalesReportToolStripMenuItem";
-            this.periodicSalesReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.periodicSalesReportToolStripMenuItem.Text = "Periodic Sales Report";
-            this.periodicSalesReportToolStripMenuItem.Click += new System.EventHandler(this.periodicSalesReportToolStripMenuItem_Click);
             // 
             // MainFrom
             // 

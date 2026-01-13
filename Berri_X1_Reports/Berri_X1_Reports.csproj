@@ -96,6 +96,12 @@
     <Compile Include="MDIParent1.Designer.cs">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Not used\rptHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Not used\rptHeader.Designer.cs">
+      <DependentUpon>rptHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\rptDailySalesReport.cs">
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Not used\rptHeader.resx">
+      <DependentUpon>rptHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -85,6 +85,12 @@ namespace Berri_X1_Reports.Reports
                 sqlDataAdapter.Fill(dtPeriodic);
 
                 grdData.DataSource = dtPeriodic;
+
+                //grdData.Columns["Address1"].Visible = false;
+                //grdData.Columns["Address2"].Visible = false;
+                //grdData.Columns["Phone1"].Visible = false;
+                //grdData.Columns["Email"].Visible = false;
+                //grdData.Columns["Website"].Visible = false;
             }
             catch (Exception ex)
             {
