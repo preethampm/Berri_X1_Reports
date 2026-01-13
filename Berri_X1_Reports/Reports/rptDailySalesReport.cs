@@ -72,6 +72,14 @@ namespace Berri_X1_Reports.Reports
                 sqlDataAdapter.Fill(dtDaily);
 
                 grdData.DataSource = dtDaily;
+
+                grdData.Columns["Branch Name"].Visible = false;
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+
             }
             catch (Exception ex)
             {

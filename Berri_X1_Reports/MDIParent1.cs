@@ -71,7 +71,7 @@ namespace Berri_X1_Reports
 
         private void MainFrom_Load(object sender, EventArgs e)
         {
-            bool failed = false;
+            
             bool cloudConSettings = false;
             bool branchConSettings = false;
             bool posConSettings = false;

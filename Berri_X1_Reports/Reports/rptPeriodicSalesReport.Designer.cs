@@ -34,7 +34,6 @@
             this.rbtnDetailed = new System.Windows.Forms.RadioButton();
             this.rbtnSummary = new System.Windows.Forms.RadioButton();
             this.txtShift = new System.Windows.Forms.TextBox();
-            this.txtCounter = new System.Windows.Forms.TextBox();
             this.lblShift = new System.Windows.Forms.Label();
             this.lblCounter = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.cmbCounter = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -61,11 +61,11 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTop.Controls.Add(this.cmbCounter);
             this.pnlTop.Controls.Add(this.lblReportType);
             this.pnlTop.Controls.Add(this.rbtnDetailed);
             this.pnlTop.Controls.Add(this.rbtnSummary);
             this.pnlTop.Controls.Add(this.txtShift);
-            this.pnlTop.Controls.Add(this.txtCounter);
             this.pnlTop.Controls.Add(this.lblShift);
             this.pnlTop.Controls.Add(this.lblCounter);
             this.pnlTop.Controls.Add(this.lblTo);
@@ -124,13 +124,6 @@
             this.txtShift.Size = new System.Drawing.Size(114, 20);
             this.txtShift.TabIndex = 167;
             // 
-            // txtCounter
-            // 
-            this.txtCounter.Location = new System.Drawing.Point(512, 12);
-            this.txtCounter.Name = "txtCounter";
-            this.txtCounter.Size = new System.Drawing.Size(114, 20);
-            this.txtCounter.TabIndex = 166;
-            // 
             // lblShift
             // 
             this.lblShift.AutoSize = true;
@@ -166,7 +159,7 @@
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom.Location = new System.Drawing.Point(512, 44);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(114, 20);
+            this.dtpFrom.Size = new System.Drawing.Size(122, 20);
             this.dtpFrom.TabIndex = 161;
             this.dtpFrom.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             // 
@@ -334,6 +327,35 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
+            // cmbCounter
+            // 
+            this.cmbCounter.FormattingEnabled = true;
+            this.cmbCounter.Items.AddRange(new object[] {
+            "",
+            "HO-01",
+            "HO-02",
+            "HO-03",
+            "HO-04",
+            "HO-05",
+            "HO-06",
+            "HO-07",
+            "JBR-01",
+            "JBR-02",
+            "JBR-03",
+            "JBR-04",
+            "1012",
+            "1013",
+            "1014",
+            "1015",
+            "1016",
+            "1017",
+            "1019",
+            "HO-AC-07"});
+            this.cmbCounter.Location = new System.Drawing.Point(513, 13);
+            this.cmbCounter.Name = "cmbCounter";
+            this.cmbCounter.Size = new System.Drawing.Size(121, 21);
+            this.cmbCounter.TabIndex = 172;
+            // 
             // rptPeriodicSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,7 +378,6 @@
 
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.TextBox txtShift;
-        private System.Windows.Forms.TextBox txtCounter;
         private System.Windows.Forms.Label lblShift;
         private System.Windows.Forms.Label lblCounter;
         private System.Windows.Forms.Label lblTo;
@@ -377,5 +398,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblReportType;
+        private System.Windows.Forms.ComboBox cmbCounter;
     }
 }

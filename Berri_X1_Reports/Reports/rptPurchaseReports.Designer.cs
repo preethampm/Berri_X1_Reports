@@ -782,7 +782,7 @@ namespace Berri_X1_Reports
         internal System.Windows.Forms.ComboBox cmbPurchType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnRemoveSupplier;
-        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Button btnSupplier;    
         private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Panel pnlRptType;
         private System.Windows.Forms.RadioButton rbSummary;

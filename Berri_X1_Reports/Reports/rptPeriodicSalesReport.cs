@@ -41,21 +41,27 @@ namespace Berri_X1_Reports.Reports
             }
             DateTime today = DateTime.Today;
             if (dtpFrom.Value.Date == today && dtpTo.Value.Date == today)
-            {
+            {   
                 MessageBox.Show("Please change the date range. No data available for today.");
                 dtpFrom.Focus();
                 return;
             }
             int shiftId = 0;
-            int counterId = 0;
+            //int counterId = 0;
             int.TryParse(txtShift.Text.Trim(), out shiftId);
-            int.TryParse(txtCounter.Text.Trim(), out counterId);
+            //int.TryParse(txtCounter.Text.Trim(), out counterId);
 
             if (!rbtnSummary.Checked && !rbtnDetailed.Checked)
             {
                 MessageBox.Show("Please select either Summary or Detailed report type.");
                 return;
             }
+            //if (cmbCounter.SelectedIndex < 0)
+            //{
+            //    MessageBox.Show("Please select a counter.");
+            //    cmbCounter.Focus();
+            //    return;
+            //}
             string procedureName = "";
             if (rbtnSummary.Checked)
             {
@@ -77,7 +83,7 @@ namespace Berri_X1_Reports.Reports
                 new SqlParameter("@fromdate", dtpFrom.Value.Date),
                 new SqlParameter("@todate", dtpTo.Value.Date),
                 new SqlParameter("@shiftid", shiftId),
-                new SqlParameter("@counterid", counterId)
+                new SqlParameter("@countercode", cmbCounter.Text)
             };
                 sqlCommand.Parameters.AddRange(values);
 
