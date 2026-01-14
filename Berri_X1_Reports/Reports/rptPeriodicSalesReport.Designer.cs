@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptPeriodicSalesReport));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.cmbCounter = new System.Windows.Forms.ComboBox();
             this.lblReportType = new System.Windows.Forms.Label();
             this.rbtnDetailed = new System.Windows.Forms.RadioButton();
             this.rbtnSummary = new System.Windows.Forms.RadioButton();
@@ -51,7 +52,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
-            this.cmbCounter = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -78,10 +78,40 @@
             this.pnlTop.Controls.Add(this.txtBranches);
             this.pnlTop.Controls.Add(this.comboBox1);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1484, 76);
             this.pnlTop.TabIndex = 13;
+            // 
+            // cmbCounter
+            // 
+            this.cmbCounter.FormattingEnabled = true;
+            this.cmbCounter.Items.AddRange(new object[] {
+            "",
+            "HO-01",
+            "HO-02",
+            "HO-03",
+            "HO-04",
+            "HO-05",
+            "HO-06",
+            "HO-07",
+            "JBR-01",
+            "JBR-02",
+            "JBR-03",
+            "JBR-04",
+            "1012",
+            "1013",
+            "1014",
+            "1015",
+            "1016",
+            "1017",
+            "1019",
+            "HO-AC-07"});
+            this.cmbCounter.Location = new System.Drawing.Point(513, 13);
+            this.cmbCounter.Name = "cmbCounter";
+            this.cmbCounter.Size = new System.Drawing.Size(121, 21);
+            this.cmbCounter.TabIndex = 172;
             // 
             // lblReportType
             // 
@@ -161,7 +191,7 @@
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(122, 20);
             this.dtpFrom.TabIndex = 161;
-            this.dtpFrom.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
+            this.dtpFrom.Value = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
             // 
             // dtpTo
             // 
@@ -170,7 +200,7 @@
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(114, 20);
             this.dtpTo.TabIndex = 162;
-            this.dtpTo.Value = new System.DateTime(2024, 4, 10, 0, 0, 0, 0);
+            this.dtpTo.Value = new System.DateTime(2026, 1, 10, 0, 0, 0, 0);
             // 
             // lblFrom
             // 
@@ -327,35 +357,6 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // cmbCounter
-            // 
-            this.cmbCounter.FormattingEnabled = true;
-            this.cmbCounter.Items.AddRange(new object[] {
-            "",
-            "HO-01",
-            "HO-02",
-            "HO-03",
-            "HO-04",
-            "HO-05",
-            "HO-06",
-            "HO-07",
-            "JBR-01",
-            "JBR-02",
-            "JBR-03",
-            "JBR-04",
-            "1012",
-            "1013",
-            "1014",
-            "1015",
-            "1016",
-            "1017",
-            "1019",
-            "HO-AC-07"});
-            this.cmbCounter.Location = new System.Drawing.Point(513, 13);
-            this.cmbCounter.Name = "cmbCounter";
-            this.cmbCounter.Size = new System.Drawing.Size(121, 21);
-            this.cmbCounter.TabIndex = 172;
-            // 
             // rptPeriodicSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +383,6 @@
         private System.Windows.Forms.Label lblCounter;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpFrom;
-        private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Button btnRemoveBranch;
         private System.Windows.Forms.Button btnBrnLookup;
@@ -399,5 +399,6 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblReportType;
         private System.Windows.Forms.ComboBox cmbCounter;
+        private System.Windows.Forms.DateTimePicker dtpTo;
     }
 }

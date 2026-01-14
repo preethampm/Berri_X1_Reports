@@ -92,11 +92,16 @@ namespace Berri_X1_Reports.Reports
 
                 grdData.DataSource = dtPeriodic;
 
-                //grdData.Columns["Address1"].Visible = false;
-                //grdData.Columns["Address2"].Visible = false;
-                //grdData.Columns["Phone1"].Visible = false;
-                //grdData.Columns["Email"].Visible = false;
-                //grdData.Columns["Website"].Visible = false;
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+                grdData.Columns["Phone1"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["From Date"].Visible = false;
+                grdData.Columns["To Date"].Visible = false;
+                grdData.Columns["Email"].Visible = false;
+                grdData.Columns["Website"].Visible = false;
             }
             catch (Exception ex)
             {
