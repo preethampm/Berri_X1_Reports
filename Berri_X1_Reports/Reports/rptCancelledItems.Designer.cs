@@ -1,6 +1,6 @@
 ﻿namespace Berri_X1_Reports.Reports
 {
-    partial class rptPeriodicSalesReport
+    partial class rptCancelledItems
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptPeriodicSalesReport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptCancelledItems));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.cmbCounter = new System.Windows.Forms.ComboBox();
-            this.lblReportType = new System.Windows.Forms.Label();
-            this.rbtnDetailed = new System.Windows.Forms.RadioButton();
-            this.rbtnSummary = new System.Windows.Forms.RadioButton();
-            this.txtShift = new System.Windows.Forms.TextBox();
-            this.lblShift = new System.Windows.Forms.Label();
-            this.lblCounter = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
@@ -61,13 +54,6 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTop.Controls.Add(this.cmbCounter);
-            this.pnlTop.Controls.Add(this.lblReportType);
-            this.pnlTop.Controls.Add(this.rbtnDetailed);
-            this.pnlTop.Controls.Add(this.rbtnSummary);
-            this.pnlTop.Controls.Add(this.txtShift);
-            this.pnlTop.Controls.Add(this.lblShift);
-            this.pnlTop.Controls.Add(this.lblCounter);
             this.pnlTop.Controls.Add(this.lblTo);
             this.pnlTop.Controls.Add(this.dtpFrom);
             this.pnlTop.Controls.Add(this.dtpTo);
@@ -81,104 +67,14 @@
             this.pnlTop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1484, 76);
-            this.pnlTop.TabIndex = 13;
-            // 
-            // cmbCounter
-            // 
-            this.cmbCounter.FormattingEnabled = true;
-            this.cmbCounter.Items.AddRange(new object[] {
-            "",
-            "HO-01",
-            "HO-02",
-            "HO-03",
-            "HO-04",
-            "HO-05",
-            "HO-06",
-            "HO-07",
-            "JBR-01",
-            "JBR-02",
-            "JBR-03",
-            "JBR-04",
-            "1012",
-            "1013",
-            "1014",
-            "1015",
-            "1016",
-            "1017",
-            "1019",
-            "HO-AC-07"});
-            this.cmbCounter.Location = new System.Drawing.Point(513, 13);
-            this.cmbCounter.Name = "cmbCounter";
-            this.cmbCounter.Size = new System.Drawing.Size(121, 21);
-            this.cmbCounter.TabIndex = 172;
-            // 
-            // lblReportType
-            // 
-            this.lblReportType.AutoSize = true;
-            this.lblReportType.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportType.Location = new System.Drawing.Point(10, 41);
-            this.lblReportType.Name = "lblReportType";
-            this.lblReportType.Size = new System.Drawing.Size(91, 17);
-            this.lblReportType.TabIndex = 170;
-            this.lblReportType.Text = "Report Type: ";
-            // 
-            // rbtnDetailed
-            // 
-            this.rbtnDetailed.AutoSize = true;
-            this.rbtnDetailed.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDetailed.Location = new System.Drawing.Point(226, 39);
-            this.rbtnDetailed.Name = "rbtnDetailed";
-            this.rbtnDetailed.Size = new System.Drawing.Size(78, 21);
-            this.rbtnDetailed.TabIndex = 169;
-            this.rbtnDetailed.TabStop = true;
-            this.rbtnDetailed.Text = "Detailed";
-            this.rbtnDetailed.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSummary
-            // 
-            this.rbtnSummary.AutoSize = true;
-            this.rbtnSummary.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnSummary.Location = new System.Drawing.Point(126, 39);
-            this.rbtnSummary.Name = "rbtnSummary";
-            this.rbtnSummary.Size = new System.Drawing.Size(80, 21);
-            this.rbtnSummary.TabIndex = 168;
-            this.rbtnSummary.TabStop = true;
-            this.rbtnSummary.Text = "Summary";
-            this.rbtnSummary.UseVisualStyleBackColor = true;
-            // 
-            // txtShift
-            // 
-            this.txtShift.Location = new System.Drawing.Point(699, 13);
-            this.txtShift.Name = "txtShift";
-            this.txtShift.Size = new System.Drawing.Size(114, 20);
-            this.txtShift.TabIndex = 167;
-            // 
-            // lblShift
-            // 
-            this.lblShift.AutoSize = true;
-            this.lblShift.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShift.Location = new System.Drawing.Point(645, 15);
-            this.lblShift.Name = "lblShift";
-            this.lblShift.Size = new System.Drawing.Size(50, 17);
-            this.lblShift.TabIndex = 165;
-            this.lblShift.Text = "Shift Id";
-            // 
-            // lblCounter
-            // 
-            this.lblCounter.AutoSize = true;
-            this.lblCounter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounter.Location = new System.Drawing.Point(445, 15);
-            this.lblCounter.Name = "lblCounter";
-            this.lblCounter.Size = new System.Drawing.Size(61, 17);
-            this.lblCounter.TabIndex = 152;
-            this.lblCounter.Text = "Counter";
+            this.pnlTop.Size = new System.Drawing.Size(984, 47);
+            this.pnlTop.TabIndex = 14;
             // 
             // lblTo
             // 
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTo.Location = new System.Drawing.Point(466, 46);
+            this.lblTo.Location = new System.Drawing.Point(460, 15);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(40, 17);
             this.lblTo.TabIndex = 163;
@@ -187,7 +83,7 @@
             // dtpFrom
             // 
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(512, 44);
+            this.dtpFrom.Location = new System.Drawing.Point(506, 14);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(122, 20);
             this.dtpFrom.TabIndex = 161;
@@ -196,7 +92,7 @@
             // dtpTo
             // 
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(699, 45);
+            this.dtpTo.Location = new System.Drawing.Point(693, 14);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(114, 20);
             this.dtpTo.TabIndex = 162;
@@ -206,7 +102,7 @@
             // 
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrom.Location = new System.Drawing.Point(671, 48);
+            this.lblFrom.Location = new System.Drawing.Point(665, 15);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(22, 17);
             this.lblFrom.TabIndex = 164;
@@ -226,7 +122,6 @@
             this.btnRemoveBranch.TabIndex = 157;
             this.btnRemoveBranch.Tag = "SRCH";
             this.btnRemoveBranch.UseVisualStyleBackColor = false;
-            this.btnRemoveBranch.Click += new System.EventHandler(this.btnRemoveBranch_Click);
             // 
             // btnBrnLookup
             // 
@@ -288,10 +183,10 @@
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdData.Location = new System.Drawing.Point(0, 76);
+            this.grdData.Location = new System.Drawing.Point(0, 47);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1484, 685);
-            this.grdData.TabIndex = 14;
+            this.grdData.Size = new System.Drawing.Size(984, 714);
+            this.grdData.TabIndex = 15;
             // 
             // pnlBottom
             // 
@@ -302,41 +197,39 @@
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(0, 716);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1484, 45);
-            this.pnlBottom.TabIndex = 15;
+            this.pnlBottom.Size = new System.Drawing.Size(984, 45);
+            this.pnlBottom.TabIndex = 16;
             // 
             // btnFilter
             // 
             this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.Location = new System.Drawing.Point(1063, 5);
+            this.btnFilter.Location = new System.Drawing.Point(563, 5);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 37);
             this.btnFilter.TabIndex = 5;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1381, 5);
+            this.btnClose.Location = new System.Drawing.Point(881, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 37);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(1169, 5);
+            this.btnPrint.Location = new System.Drawing.Point(669, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 37);
             this.btnPrint.TabIndex = 3;
@@ -349,7 +242,7 @@
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnView.Location = new System.Drawing.Point(1275, 5);
+            this.btnView.Location = new System.Drawing.Point(775, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 37);
             this.btnView.TabIndex = 0;
@@ -357,16 +250,16 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // rptPeriodicSalesReport
+            // rptCancelledItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
-            this.Name = "rptPeriodicSalesReport";
-            this.Text = "Periodic Sales Report (Counter-Wise)";
+            this.Name = "rptCancelledItems";
+            this.Text = "Cancelled Items Report";
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
@@ -378,11 +271,9 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.TextBox txtShift;
-        private System.Windows.Forms.Label lblShift;
-        private System.Windows.Forms.Label lblCounter;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Button btnRemoveBranch;
         private System.Windows.Forms.Button btnBrnLookup;
@@ -390,15 +281,10 @@
         private System.Windows.Forms.TextBox txtBranches;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView grdData;
-        private System.Windows.Forms.RadioButton rbtnDetailed;
-        private System.Windows.Forms.RadioButton rbtnSummary;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.Label lblReportType;
-        private System.Windows.Forms.ComboBox cmbCounter;
-        private System.Windows.Forms.DateTimePicker dtpTo;
     }
 }

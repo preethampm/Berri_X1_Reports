@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\rptCancelledItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCancelledItems.Designer.cs">
+      <DependentUpon>rptCancelledItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptDailySalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\rptCancelledItems.resx">
+      <DependentUpon>rptCancelledItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptDailySalesReport.resx">
       <DependentUpon>rptDailySalesReport.cs</DependentUpon>
     </EmbeddedResource>

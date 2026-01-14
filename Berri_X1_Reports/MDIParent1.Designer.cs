@@ -45,6 +45,7 @@
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelledItemsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +86,8 @@
             this.supplierProductListToolStripMenuItem,
             this.productSalesDivisonWiseToolStripMenuItem,
             this.dailyToolStripMenuItem,
-            this.periodicSalesReportToolStripMenuItem});
+            this.periodicSalesReportToolStripMenuItem,
+            this.cancelledItemsReportToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -170,6 +172,13 @@
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
             // 
+            // cancelledItemsReportToolStripMenuItem
+            // 
+            this.cancelledItemsReportToolStripMenuItem.Name = "cancelledItemsReportToolStripMenuItem";
+            this.cancelledItemsReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cancelledItemsReportToolStripMenuItem.Text = "Cancelled Items Report";
+            this.cancelledItemsReportToolStripMenuItem.Click += new System.EventHandler(this.cancelledItemsReportToolStripMenuItem_Click);
+            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem withGPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem withoutGPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem periodicSalesReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelledItemsReportToolStripMenuItem;
     }
 }
 

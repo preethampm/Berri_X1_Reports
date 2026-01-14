@@ -270,5 +270,13 @@ namespace Berri_X1_Reports
             rptPeriodicSales.StartPosition = FormStartPosition.CenterParent;
             rptPeriodicSales.Show();
         }
+
+        private void cancelledItemsReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptCancelledItems rptCancelledItems = new rptCancelledItems();
+            rptCancelledItems.MdiParent = this;
+            rptCancelledItems.StartPosition = FormStartPosition.CenterParent;
+            rptCancelledItems.Show();
+        }
     }
 }
