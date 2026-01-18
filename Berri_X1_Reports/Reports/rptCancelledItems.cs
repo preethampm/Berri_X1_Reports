@@ -123,5 +123,17 @@ namespace Berri_X1_Reports.Reports
         {
             GetData();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            pnlTop.Visible = !pnlTop.Visible;
+            btnFilter.Text = pnlTop.Visible ? "Hide Filter" : "Show Filter";
+        }
     }
 }
