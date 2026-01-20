@@ -81,7 +81,6 @@ namespace Berri_X1_Reports.Reports
                     new SqlParameter("@fromdate", dtpFrom.Value.Date),
                     new SqlParameter("@todate", dtpTo.Value.Date),
                     new SqlParameter("@reporttype", cmbReportType.Text),
-                    new SqlParameter("@paytype", GetPayType()),
                     new SqlParameter("@department", cmbDepartment.Text),
                     new SqlParameter("@category", cmbCategory.Text)
                 };
@@ -97,13 +96,29 @@ namespace Berri_X1_Reports.Reports
                     grdData.Columns["COST OF SALE"].Visible = false;
                     grdData.Columns["PROFIT AMOUNT"].Visible = false;
                     grdData.Columns["PROFIT %"].Visible = false;
+                    grdData.Columns["CASH SALES"].Visible = false;
+                    grdData.Columns["CARD SALES"].Visible = false;
+                    grdData.Columns["CREDIT SALES"].Visible = false;    
                 }
                 else
                 {
                     grdData.Columns["COST OF SALE"].Visible = true;
                     grdData.Columns["PROFIT AMOUNT"].Visible = true;
                     grdData.Columns["PROFIT %"].Visible = true;
+                    grdData.Columns["CASH SALES"].Visible = true;
+                    grdData.Columns["CARD SALES"].Visible = true;
+                    grdData.Columns["CREDIT SALES"].Visible = true;
                 }
+
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+                grdData.Columns["Phone1"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["From Date"].Visible = false;
+                grdData.Columns["To Date"].Visible = false;
+                grdData.Columns["BRANCH"].Visible = false;
 
             }
             catch (Exception ex)
@@ -217,30 +232,13 @@ namespace Berri_X1_Reports.Reports
             }
 
             DataTable dtrpt = dtSales.Copy();
-
-            if (rbtnCash.Checked)
-            {
-                if (dtrpt.Columns.Contains("CREDIT SALES"))
-                    dtrpt.Columns.Remove("CREDIT SALES");
-            }
-            else if (rbtnCredit.Checked)
-            {
-                if (dtrpt.Columns.Contains("CASH SALES"))
-                    dtrpt.Columns.Remove("CASH SALES");
-            }
-
             DataSet dsReport = new DataSet();
             dsReport.Tables.Add(dtrpt);
 
             Common_View.Reporintg.PrintReport(dsReport, reportName, 1, true);
         }
 
-        private string GetPayType()
-        {
-            if (rbtnCash.Checked) return "Cash";
-            if (rbtnCredit.Checked) return "Credit";
-            return "Both";
-        }
+
 
         private void cmbReportType_SelectedIndexChanged(object sender, EventArgs e)
         {

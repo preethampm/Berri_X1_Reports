@@ -178,6 +178,7 @@
             // 
             this.grdData.AllowUserToAddRows = false;
             this.grdData.AllowUserToDeleteRows = false;
+            this.grdData.AllowUserToOrderColumns = true;
             this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdData.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -185,6 +186,7 @@
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdData.Location = new System.Drawing.Point(0, 47);
             this.grdData.Name = "grdData";
+            this.grdData.ReadOnly = true;
             this.grdData.Size = new System.Drawing.Size(984, 714);
             this.grdData.TabIndex = 15;
             // 

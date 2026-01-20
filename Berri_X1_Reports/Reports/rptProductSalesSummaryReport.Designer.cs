@@ -34,9 +34,6 @@
             this.lblSubCategory = new System.Windows.Forms.Label();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.lblReportType = new System.Windows.Forms.Label();
-            this.rbtnBoth = new System.Windows.Forms.RadioButton();
-            this.rbtnCredit = new System.Windows.Forms.RadioButton();
-            this.rbtnCash = new System.Windows.Forms.RadioButton();
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
@@ -71,9 +68,6 @@
             this.pnlTop.Controls.Add(this.lblSubCategory);
             this.pnlTop.Controls.Add(this.cmbReportType);
             this.pnlTop.Controls.Add(this.lblReportType);
-            this.pnlTop.Controls.Add(this.rbtnBoth);
-            this.pnlTop.Controls.Add(this.rbtnCredit);
-            this.pnlTop.Controls.Add(this.rbtnCash);
             this.pnlTop.Controls.Add(this.lblTo);
             this.pnlTop.Controls.Add(this.dtpFrom);
             this.pnlTop.Controls.Add(this.dtpTo);
@@ -141,42 +135,6 @@
             this.lblReportType.Size = new System.Drawing.Size(78, 17);
             this.lblReportType.TabIndex = 172;
             this.lblReportType.Text = "Report Type";
-            // 
-            // rbtnBoth
-            // 
-            this.rbtnBoth.AutoSize = true;
-            this.rbtnBoth.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnBoth.Location = new System.Drawing.Point(334, 99);
-            this.rbtnBoth.Name = "rbtnBoth";
-            this.rbtnBoth.Size = new System.Drawing.Size(53, 21);
-            this.rbtnBoth.TabIndex = 171;
-            this.rbtnBoth.TabStop = true;
-            this.rbtnBoth.Text = "Both";
-            this.rbtnBoth.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCredit
-            // 
-            this.rbtnCredit.AutoSize = true;
-            this.rbtnCredit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCredit.Location = new System.Drawing.Point(253, 99);
-            this.rbtnCredit.Name = "rbtnCredit";
-            this.rbtnCredit.Size = new System.Drawing.Size(63, 21);
-            this.rbtnCredit.TabIndex = 170;
-            this.rbtnCredit.TabStop = true;
-            this.rbtnCredit.Text = "Credit";
-            this.rbtnCredit.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCash
-            // 
-            this.rbtnCash.AutoSize = true;
-            this.rbtnCash.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCash.Location = new System.Drawing.Point(183, 99);
-            this.rbtnCash.Name = "rbtnCash";
-            this.rbtnCash.Size = new System.Drawing.Size(55, 21);
-            this.rbtnCash.TabIndex = 169;
-            this.rbtnCash.TabStop = true;
-            this.rbtnCash.Text = "Cash";
-            this.rbtnCash.UseVisualStyleBackColor = true;
             // 
             // lblTo
             // 
@@ -466,9 +424,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.RadioButton rbtnCash;
-        private System.Windows.Forms.RadioButton rbtnBoth;
-        private System.Windows.Forms.RadioButton rbtnCredit;
         private System.Windows.Forms.ComboBox cmbReportType;
         private System.Windows.Forms.Label lblReportType;
         private System.Windows.Forms.Label lblSubCategory;
