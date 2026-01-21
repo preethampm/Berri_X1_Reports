@@ -278,5 +278,13 @@ namespace Berri_X1_Reports
             rptCancelledItems.StartPosition = FormStartPosition.CenterParent;
             rptCancelledItems.Show();
         }
+
+        private void invoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptTaxReportInvoiceWise rptTaxReportInvoiceWise = new rptTaxReportInvoiceWise();
+            rptTaxReportInvoiceWise.MdiParent = this;
+            rptTaxReportInvoiceWise.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportInvoiceWise.Show();
+        }
     }
 }

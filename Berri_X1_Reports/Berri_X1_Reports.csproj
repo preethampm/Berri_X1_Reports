@@ -158,6 +158,12 @@
     <Compile Include="Reports\rptPurchaseReports.Designer.cs">
       <DependentUpon>rptPurchaseReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptTaxReportInvoiceWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptTaxReportInvoiceWise.Designer.cs">
+      <DependentUpon>rptTaxReportInvoiceWise.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptPurchaseReports.resx">
       <DependentUpon>rptPurchaseReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptTaxReportInvoiceWise.resx">
+      <DependentUpon>rptTaxReportInvoiceWise.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

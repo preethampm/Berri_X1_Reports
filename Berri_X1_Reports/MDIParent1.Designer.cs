@@ -41,11 +41,14 @@
             this.withoutGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.periodicSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelledItemsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dummyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purhaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelledItemsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemsWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +90,8 @@
             this.productSalesDivisonWiseToolStripMenuItem,
             this.dailyToolStripMenuItem,
             this.periodicSalesReportToolStripMenuItem,
-            this.cancelledItemsReportToolStripMenuItem});
+            this.cancelledItemsReportToolStripMenuItem,
+            this.dummyToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -145,6 +149,22 @@
             this.periodicSalesReportToolStripMenuItem.Text = "Periodic Sales Report";
             this.periodicSalesReportToolStripMenuItem.Click += new System.EventHandler(this.periodicSalesReportToolStripMenuItem_Click);
             // 
+            // cancelledItemsReportToolStripMenuItem
+            // 
+            this.cancelledItemsReportToolStripMenuItem.Name = "cancelledItemsReportToolStripMenuItem";
+            this.cancelledItemsReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cancelledItemsReportToolStripMenuItem.Text = "Cancelled Items Report";
+            this.cancelledItemsReportToolStripMenuItem.Click += new System.EventHandler(this.cancelledItemsReportToolStripMenuItem_Click);
+            // 
+            // dummyToolStripMenuItem
+            // 
+            this.dummyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.invoiceWiseToolStripMenuItem,
+            this.itemsWiseToolStripMenuItem});
+            this.dummyToolStripMenuItem.Name = "dummyToolStripMenuItem";
+            this.dummyToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.dummyToolStripMenuItem.Text = "Tax Report";
+            // 
             // purhaseToolStripMenuItem
             // 
             this.purhaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,12 +192,18 @@
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
             // 
-            // cancelledItemsReportToolStripMenuItem
+            // invoiceWiseToolStripMenuItem
             // 
-            this.cancelledItemsReportToolStripMenuItem.Name = "cancelledItemsReportToolStripMenuItem";
-            this.cancelledItemsReportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.cancelledItemsReportToolStripMenuItem.Text = "Cancelled Items Report";
-            this.cancelledItemsReportToolStripMenuItem.Click += new System.EventHandler(this.cancelledItemsReportToolStripMenuItem_Click);
+            this.invoiceWiseToolStripMenuItem.Name = "invoiceWiseToolStripMenuItem";
+            this.invoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.invoiceWiseToolStripMenuItem.Text = "Invoice Wise";
+            this.invoiceWiseToolStripMenuItem.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem_Click);
+            // 
+            // itemsWiseToolStripMenuItem
+            // 
+            this.itemsWiseToolStripMenuItem.Name = "itemsWiseToolStripMenuItem";
+            this.itemsWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itemsWiseToolStripMenuItem.Text = "Items Wise";
             // 
             // MainFrom
             // 
@@ -219,6 +245,9 @@
         private System.Windows.Forms.ToolStripMenuItem withoutGPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem periodicSalesReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelledItemsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dummyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invoiceWiseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemsWiseToolStripMenuItem;
     }
 }
 

@@ -88,6 +88,17 @@ namespace Berri_X1_Reports.Reports
                 sqlDataAdapter.Fill(dtPurchase);
 
                 grdData.DataSource = dtPurchase;
+
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+                grdData.Columns["Phone1"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["From Date"].Visible = false;
+                grdData.Columns["To Date"].Visible = false;
+                grdData.Columns["Branch Name"].Visible = false;
+                grdData.Columns["Report Type"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -108,7 +119,7 @@ namespace Berri_X1_Reports.Reports
             cmbCategory.DataSource = Masters_PRESENT.GetList("ITEMCAT", "", true, Common_Var.Company.cmpId);
             cmbCategory.DisplayMember = "Description";
         }
-
+            
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
