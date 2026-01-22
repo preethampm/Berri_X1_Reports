@@ -286,5 +286,13 @@ namespace Berri_X1_Reports
             rptTaxReportInvoiceWise.StartPosition = FormStartPosition.CenterParent;
             rptTaxReportInvoiceWise.Show();
         }
+
+        private void itemsWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptTaxReportItemWise rptTaxReportItemWise = new rptTaxReportItemWise();
+            rptTaxReportItemWise.MdiParent = this;
+            rptTaxReportItemWise.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportItemWise.Show();
+        }
     }
 }
