@@ -49,19 +49,19 @@ namespace Berri_X1_Reports.Reports
 
             if (cmbReportType.Text == "Purchase")
             {
-                procedureName = "psp_TAX_REPORT_PURCHASE_INVOICE_WISE";
+                procedureName = "psp_TAX_REPORT_PURCHASE_IW";
             }
             else if (cmbReportType.Text == "Purchase Return")
             {
-                procedureName = "psp_TAX_REPORT_PURCHASE_RETURN_INVOICE_WISE";
+                procedureName = "psp_TAX_REPORT_PURCHASE_RETURN_IW";
             }
             else if (cmbReportType.Text == "Invoice")
             {
-                procedureName = "psp_TAX_REPORT_INVOICE_WISE";
+                procedureName = "psp_TAX_REPORT_INVOICE_IW";
             }
             else if (cmbReportType.Text == "Invoice Return")
             {
-                procedureName = "psp_TAX_REPORT_INVOICE_RETURN_WISE";
+                procedureName = "psp_TAX_REPORT_INVOICE_RETURN_IW";
             }
             else
             {
@@ -90,12 +90,18 @@ namespace Berri_X1_Reports.Reports
                     
             grdData.DataSource = dtTax;
 
-            grdData.Columns["Division"].Visible = false;
-            grdData.Columns["Doc Type"].Visible = false;
-            //grdData.Columns["City"].Visible = false;
-            //grdData.Columns["State"].Visible = false;
-            //grdData.Columns["Country"].Visible = false;
-            //grdData.Columns["Place"].Visible = false;
+                string[] hideCols =
+                {
+                "ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION"
+                };
+
+                foreach (string col in hideCols)
+                {
+                    if (grdData.Columns.Contains(col))
+                    {
+                        grdData.Columns[col].Visible = false;
+                    }
+                }
 
             }
             catch (Exception ex)
