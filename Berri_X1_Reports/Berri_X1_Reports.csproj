@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Berri_X1_DLL">
       <HintPath>Lib\Berri_X1_DLL.dll</HintPath>
@@ -57,10 +60,20 @@
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="MediaFoundation, Version=3.1.0.32450, Culture=neutral, PublicKeyToken=36fa660e1d6ebf8d, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms 2025 Q3\Bin462\MediaFoundation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms 2025 Q3\Bin462\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,19 +84,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Licensing.Runtime, Version=1.6.16.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\GitHub\Berri_X1\Berri_X1\bin\Debug\Telerik.Licensing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.WinControls, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="TelerikCommon, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="TelerikData, Version=2025.3.812.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\GitHub\Berri_x3_POS_r1\Berri_X3_POS\bin\Debug\TelerikData.dll</HintPath>
-    </Reference>
     <Reference Include="UIAutomationClient" />
     <Reference Include="UIAutomationProvider" />
     <Reference Include="UIAutomationTypes" />
@@ -110,12 +110,6 @@
     <Compile Include="Reports\rptCancelledItems.Designer.cs">
       <DependentUpon>rptCancelledItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptDailySalesReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\rptDailySalesReport.Designer.cs">
-      <DependentUpon>rptDailySalesReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Not used\rptItemDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +121,12 @@
     </Compile>
     <Compile Include="Not used\rptPartyMaster.Designer.cs">
       <DependentUpon>rptPartyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptDailySalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailySalesReport.Designer.cs">
+      <DependentUpon>rptDailySalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\rptPeriodicSalesReport.cs">
       <SubType>Form</SubType>
@@ -151,12 +151,6 @@
     </Compile>
     <Compile Include="Reports\rptPurchaseDepartmentSummaryReport.Designer.cs">
       <DependentUpon>rptPurchaseDepartmentSummaryReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\rptPurchaseReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\rptPurchaseReports.Designer.cs">
-      <DependentUpon>rptPurchaseReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\rptTaxReportInvoiceWise.cs">
       <SubType>Form</SubType>
@@ -188,14 +182,14 @@
     <EmbeddedResource Include="Reports\rptCancelledItems.resx">
       <DependentUpon>rptCancelledItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptDailySalesReport.resx">
-      <DependentUpon>rptDailySalesReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Not used\rptItemDetails.resx">
       <DependentUpon>rptItemDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Not used\rptPartyMaster.resx">
       <DependentUpon>rptPartyMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailySalesReport.resx">
+      <DependentUpon>rptDailySalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptPeriodicSalesReport.resx">
       <DependentUpon>rptPeriodicSalesReport.cs</DependentUpon>
@@ -209,15 +203,13 @@
     <EmbeddedResource Include="Reports\rptPurchaseDepartmentSummaryReport.resx">
       <DependentUpon>rptPurchaseDepartmentSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptPurchaseReports.resx">
-      <DependentUpon>rptPurchaseReports.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptTaxReportInvoiceWise.resx">
       <DependentUpon>rptTaxReportInvoiceWise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptTaxReportItemWise.resx">
       <DependentUpon>rptTaxReportItemWise.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -240,11 +232,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Telerik.Licensing.1.6.35\build\Telerik.Licensing.targets" Condition="Exists('..\packages\Telerik.Licensing.1.6.35\build\Telerik.Licensing.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Telerik.Licensing.1.6.35\build\Telerik.Licensing.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Telerik.Licensing.1.6.35\build\Telerik.Licensing.targets'))" />
-  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ShouldAddDPIScalingManifest="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -92,7 +92,7 @@ namespace Berri_X1_Reports.Reports
 
                 string[] hideCols =
                 {
-                "ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION"
+                "ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
                 };
 
                 foreach (string col in hideCols)
@@ -169,19 +169,19 @@ namespace Berri_X1_Reports.Reports
 
             if (cmbReportType.Text == "Purchase")
             {
-                reportName = "psp_TAX_REPORT_PURCHASE_IW";
+                reportName = "CRrptTR_PURCHASE_ITW";
             }
             else if (cmbReportType.Text == "Purchase Return")
             {
-                reportName = "psp_TAX_REPORT_PURCHASE_RETURN_IW";
+                reportName = "psp_TAX_REPORT_PURCHASE_RETURN_ITW";
             }
             else if (cmbReportType.Text == "Invoice")
             {
-                reportName = "psp_TAX_REPORT_IW";
+                reportName = "psp_TAX_REPORT_INVOICE_ITW";
             }
             else if (cmbReportType.Text == "Invoice Return")
             {
-                reportName = "psp_TAX_REPORT_INVOICE_RETURN_IW";
+                reportName = "psp_TAX_REPORT_INVOICE_RETURN_ITW";
             }
             else
             {

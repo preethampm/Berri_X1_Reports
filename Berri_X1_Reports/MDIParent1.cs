@@ -55,18 +55,13 @@ namespace Berri_X1_Reports
             }
         }
 
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rptPurchaseReports rptprch = new rptPurchaseReports();
-            rptprch.MdiParent = this;
-            rptprch.rptTag = "PURCHASE";
-            rptprch.StartPosition = FormStartPosition.CenterScreen;
-            rptprch.Show();
+            //rptPurchaseReports rptprch = new rptPurchaseReports();
+            //rptprch.MdiParent = this;
+            //rptprch.rptTag = "PURCHASE";
+            //rptprch.StartPosition = FormStartPosition.CenterScreen;
+            //rptprch.Show();
         }
 
         private void MainFrom_Load(object sender, EventArgs e)

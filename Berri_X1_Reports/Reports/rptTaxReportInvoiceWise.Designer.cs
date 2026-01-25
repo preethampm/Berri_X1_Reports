@@ -1,4 +1,5 @@
-﻿namespace Berri_X1_Reports.Reports
+﻿
+namespace Berri_X1_Reports.Reports
 {
     partial class rptTaxReportInvoiceWise
     {
@@ -29,7 +30,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTaxReportInvoiceWise));
-            this.grdData = new System.Windows.Forms.DataGridView();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -47,26 +47,11 @@
             this.lblBranch = new System.Windows.Forms.Label();
             this.txtBranches = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
+            this.grdData = new System.Windows.Forms.DataGridView();
             this.pnlBottom.SuspendLayout();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdData
-            // 
-            this.grdData.AllowUserToAddRows = false;
-            this.grdData.AllowUserToDeleteRows = false;
-            this.grdData.AllowUserToResizeColumns = false;
-            this.grdData.AllowUserToResizeRows = false;
-            this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grdData.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdData.Location = new System.Drawing.Point(0, 82);
-            this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1484, 634);
-            this.grdData.TabIndex = 14;
             // 
             // pnlBottom
             // 
@@ -219,7 +204,7 @@
             // btnRemoveBranch
             // 
             this.btnRemoveBranch.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveBranch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBranch.BackgroundImage")));
+            //this.btnRemoveBranch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBranch.BackgroundImage")));
             this.btnRemoveBranch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRemoveBranch.FlatAppearance.BorderSize = 0;
             this.btnRemoveBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -283,6 +268,15 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Visible = false;
             // 
+            // grdData
+            // 
+            this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdData.Location = new System.Drawing.Point(0, 82);
+            this.grdData.Name = "grdData";
+            this.grdData.Size = new System.Drawing.Size(1484, 634);
+            this.grdData.TabIndex = 17;
+            // 
             // rptTaxReportInvoiceWise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,17 +287,15 @@
             this.Controls.Add(this.pnlBottom);
             this.Name = "rptTaxReportInvoiceWise";
             this.Text = "Tax Report";
-            ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             this.pnlBottom.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView grdData;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnClose;
@@ -321,5 +313,6 @@
         private System.Windows.Forms.TextBox txtBranches;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView grdData;
     }
 }

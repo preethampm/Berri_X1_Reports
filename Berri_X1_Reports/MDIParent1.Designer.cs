@@ -34,7 +34,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierProductListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productSalesDivisonWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +84,6 @@
             // salesToolStripMenuItem
             // 
             this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
             this.supplierProductListToolStripMenuItem,
             this.productSalesDivisonWiseToolStripMenuItem,
             this.dailyToolStripMenuItem,
@@ -96,13 +94,6 @@
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
             this.salesToolStripMenuItem.Click += new System.EventHandler(this.salesToolStripMenuItem_Click);
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // supplierProductListToolStripMenuItem
             // 
@@ -168,14 +159,14 @@
             // invoiceWiseToolStripMenuItem
             // 
             this.invoiceWiseToolStripMenuItem.Name = "invoiceWiseToolStripMenuItem";
-            this.invoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.invoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.invoiceWiseToolStripMenuItem.Text = "Invoice Wise";
             this.invoiceWiseToolStripMenuItem.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem_Click);
             // 
             // itemsWiseToolStripMenuItem
             // 
             this.itemsWiseToolStripMenuItem.Name = "itemsWiseToolStripMenuItem";
-            this.itemsWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itemsWiseToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.itemsWiseToolStripMenuItem.Text = "Items Wise";
             this.itemsWiseToolStripMenuItem.Click += new System.EventHandler(this.itemsWiseToolStripMenuItem_Click);
             // 
@@ -237,7 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem purhaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mISToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierProductListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseDepartmentReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productSalesDivisonWiseToolStripMenuItem;
