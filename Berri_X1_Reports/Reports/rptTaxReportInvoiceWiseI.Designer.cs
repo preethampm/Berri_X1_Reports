@@ -1,7 +1,7 @@
 ﻿
 namespace Berri_X1_Reports.Reports
 {
-    partial class rptTaxReportInvoiceWise
+    partial class rptTaxReportInvoiceWiseI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Berri_X1_Reports.Reports
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTaxReportInvoiceWise));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTaxReportInvoiceWiseI));
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -157,8 +157,7 @@ namespace Berri_X1_Reports.Reports
             "",
             "Purchase",
             "Purchase Return",
-            "Invoice",
-            "Invoice Return"});
+            "Purchase All"});
             this.cmbReportType.Location = new System.Drawing.Point(605, 13);
             this.cmbReportType.Name = "cmbReportType";
             this.cmbReportType.Size = new System.Drawing.Size(163, 21);
@@ -181,7 +180,7 @@ namespace Berri_X1_Reports.Reports
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(114, 20);
             this.dtpFrom.TabIndex = 161;
-            this.dtpFrom.Value = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
+            this.dtpFrom.Value = new System.DateTime(2025, 12, 24, 0, 0, 0, 0);
             // 
             // dtpTo
             // 
@@ -190,6 +189,7 @@ namespace Berri_X1_Reports.Reports
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(107, 20);
             this.dtpTo.TabIndex = 162;
+            this.dtpTo.Value = new System.DateTime(2026, 1, 5, 0, 0, 0, 0);
             // 
             // lblFrom
             // 
@@ -204,7 +204,6 @@ namespace Berri_X1_Reports.Reports
             // btnRemoveBranch
             // 
             this.btnRemoveBranch.BackColor = System.Drawing.SystemColors.Control;
-            //this.btnRemoveBranch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBranch.BackgroundImage")));
             this.btnRemoveBranch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRemoveBranch.FlatAppearance.BorderSize = 0;
             this.btnRemoveBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -277,7 +276,7 @@ namespace Berri_X1_Reports.Reports
             this.grdData.Size = new System.Drawing.Size(1484, 634);
             this.grdData.TabIndex = 17;
             // 
-            // rptTaxReportInvoiceWise
+            // rptTaxReportInvoiceWiseI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,7 +284,7 @@ namespace Berri_X1_Reports.Reports
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlBottom);
-            this.Name = "rptTaxReportInvoiceWise";
+            this.Name = "rptTaxReportInvoiceWiseI";
             this.Text = "Tax Report";
             this.pnlBottom.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);

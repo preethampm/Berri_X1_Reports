@@ -1,15 +1,21 @@
 ﻿using Berri_X1_DLL;
 using Berri_X1_UI_Common;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Berri_X1_Reports.Reports
 {
-    public partial class rptTaxReportItemWise : Form
+    public partial class rptTaxReportInvoiceWiseO : Form
     {
-        public rptTaxReportItemWise()
+        public rptTaxReportInvoiceWiseO()
         {
             InitializeComponent();
         }
@@ -46,22 +52,17 @@ namespace Berri_X1_Reports.Reports
             }
 
             string procedureName = "";
-
-            if (cmbReportType.Text == "Purchase")
+            if (cmbReportType.Text == "Invoice")
             {
-                procedureName = "psp_TAX_REPORT_PURCHASE_ITW";
-            }
-            else if (cmbReportType.Text == "Purchase Return")
-            {
-                procedureName = "psp_TAX_REPORT_PURCHASE_RETURN_ITW";
-            }
-            else if (cmbReportType.Text == "Invoice")
-            {
-                procedureName = "psp_TAX_REPORT_INVOICE_ITW";
+                procedureName = "psp_TR_INVOICE_IW";
             }
             else if (cmbReportType.Text == "Invoice Return")
             {
-                procedureName = "psp_TAX_REPORT_INVOICE_RETURN_ITW";
+                procedureName = "psp_TR_INVOICE_RETURN_IW";
+            }
+            else if (cmbReportType.Text == "Invoice All")
+            {
+                procedureName = "psp_TR_INVOICE_ALL_IW";
             }
             else
             {
@@ -83,25 +84,25 @@ namespace Berri_X1_Reports.Reports
                 new SqlParameter("@reporttype", cmbReportType.Text)
 
             };
-            sqlCommand.Parameters.AddRange(values);
+                sqlCommand.Parameters.AddRange(values);
 
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-            sqlDataAdapter.Fill(dtTax);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dtTax);
 
-            grdData.DataSource = dtTax;
+                grdData.DataSource = dtTax;
 
-                string[] hideCols =
-                {
-                "ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
-                };
+                //string[] hideCols =
+                //{
+                //"ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
+                //};
 
-                foreach (string col in hideCols)
-                {
-                    if (grdData.Columns.Contains(col))
-                    {
-                        grdData.Columns[col].Visible = false;
-                    }
-                }
+                //foreach (string col in hideCols)
+                //{
+                //    if (grdData.Columns.Contains(col))
+                //    {
+                //        grdData.Columns[col].Visible = false;
+                //    }
+                //}
 
             }
             catch (Exception ex)
@@ -140,60 +141,21 @@ namespace Berri_X1_Reports.Reports
             txtBranches.Text = branches;
         }
 
+        private void btnRemoveBranch_Click(object sender, EventArgs e)
+        {
+            txtBranches.Text = "";
+        }
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             pnlTop.Visible = !pnlTop.Visible;
             btnFilter.Text = pnlTop.Visible ? "Hide Filter" : "Show Filter";
         }
 
-        private void btnRemoveBranch_Click(object sender, EventArgs e)
-        {
-            txtBranches.Text = "";
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            if (dtTax.Rows.Count <= 0)
-            {
-                MessageBox.Show("No Data. Click View to fetch the data");
-                return;
-            }
-
-            string reportName = "";
-
-            if (cmbReportType.Text == "Purchase")
-            {
-                reportName = "CRrptTR_PURCHASE_ITW";
-            }
-            else if (cmbReportType.Text == "Purchase Return")
-            {
-                reportName = "psp_TAX_REPORT_PURCHASE_RETURN_ITW";
-            }
-            else if (cmbReportType.Text == "Invoice")
-            {
-                reportName = "psp_TAX_REPORT_INVOICE_ITW";
-            }
-            else if (cmbReportType.Text == "Invoice Return")
-            {
-                reportName = "psp_TAX_REPORT_INVOICE_RETURN_ITW";
-            }
-            else
-            {
-                MessageBox.Show("Invalid report type selected");
-                return;
-            }
-
-            DataSet dsReport = new DataSet();
-            DataTable dtrpt = dtTax.Copy();
-            dsReport.Tables.Add(dtrpt);
-
-            Common_View.Reporintg.PrintReport(dsReport, reportName, 1, true);
         }
     }
 }

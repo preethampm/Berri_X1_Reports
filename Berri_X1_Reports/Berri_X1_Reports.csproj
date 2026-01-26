@@ -152,17 +152,29 @@
     <Compile Include="Reports\rptPurchaseDepartmentSummaryReport.Designer.cs">
       <DependentUpon>rptPurchaseDepartmentSummaryReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptTaxReportInvoiceWise.cs">
+    <Compile Include="Reports\rptTaxReportInvoiceWiseI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\rptTaxReportInvoiceWise.Designer.cs">
-      <DependentUpon>rptTaxReportInvoiceWise.cs</DependentUpon>
+    <Compile Include="Reports\rptTaxReportInvoiceWiseI.Designer.cs">
+      <DependentUpon>rptTaxReportInvoiceWiseI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\rptTaxReportItemWise.cs">
+    <Compile Include="Reports\rptTaxReportInvoiceWiseO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\rptTaxReportItemWise.Designer.cs">
-      <DependentUpon>rptTaxReportItemWise.cs</DependentUpon>
+    <Compile Include="Reports\rptTaxReportInvoiceWiseO.Designer.cs">
+      <DependentUpon>rptTaxReportInvoiceWiseO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptTaxReportItemWiseI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptTaxReportItemWiseI.Designer.cs">
+      <DependentUpon>rptTaxReportItemWiseI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptTaxReportItemWiseO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptTaxReportItemWiseO.Designer.cs">
+      <DependentUpon>rptTaxReportItemWiseO.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
@@ -203,11 +215,17 @@
     <EmbeddedResource Include="Reports\rptPurchaseDepartmentSummaryReport.resx">
       <DependentUpon>rptPurchaseDepartmentSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptTaxReportInvoiceWise.resx">
-      <DependentUpon>rptTaxReportInvoiceWise.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\rptTaxReportInvoiceWiseI.resx">
+      <DependentUpon>rptTaxReportInvoiceWiseI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptTaxReportItemWise.resx">
-      <DependentUpon>rptTaxReportItemWise.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\rptTaxReportInvoiceWiseO.resx">
+      <DependentUpon>rptTaxReportInvoiceWiseO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptTaxReportItemWiseI.resx">
+      <DependentUpon>rptTaxReportItemWiseI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptTaxReportItemWiseO.resx">
+      <DependentUpon>rptTaxReportItemWiseO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />

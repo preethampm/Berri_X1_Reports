@@ -1,4 +1,4 @@
-﻿    using Berri_X1_DLL;
+﻿using Berri_X1_DLL;
 using Berri_X1_UI_Common;
 using System;
 using System.Data;
@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace Berri_X1_Reports.Reports
 {
-    public partial class rptTaxReportInvoiceWise : Form
+    public partial class rptTaxReportItemWiseI : Form
     {
-        public rptTaxReportInvoiceWise()
+        public rptTaxReportItemWiseI()
         {
             InitializeComponent();
         }
@@ -49,19 +49,15 @@ namespace Berri_X1_Reports.Reports
 
             if (cmbReportType.Text == "Purchase")
             {
-                procedureName = "psp_TAX_REPORT_PURCHASE_IW";
+                procedureName = "psp_TR_PURCHASE_ITW";
             }
             else if (cmbReportType.Text == "Purchase Return")
             {
-                procedureName = "psp_TAX_REPORT_PURCHASE_RETURN_IW";
+                procedureName = "psp_TR_PURCHASE_RETURN_ITW";
             }
-            else if (cmbReportType.Text == "Invoice")
+            else if (cmbReportType.Text == "Purchase ALL")
             {
-                procedureName = "psp_TAX_REPORT_INVOICE_IW";
-            }
-            else if (cmbReportType.Text == "Invoice Return")
-            {
-                procedureName = "psp_TAX_REPORT_INVOICE_RETURN_IW";
+                procedureName = "psp_TR_PURCHASE_ALL_IW";
             }
             else
             {
@@ -71,12 +67,12 @@ namespace Berri_X1_Reports.Reports
 
             try
             {
-            SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
-            sqlConnection.Open();
-            SqlCommand sqlCommand = new SqlCommand(procedureName, sqlConnection);
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-            SqlParameter[] values =
-            {
+                SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand(procedureName, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                SqlParameter[] values =
+                {
                 new SqlParameter("@branchids", dtBrnids),
                 new SqlParameter("@fromdate", dtpFrom.Value.Date),
                 new SqlParameter("@todate", dtpTo.Value.Date),
@@ -87,21 +83,21 @@ namespace Berri_X1_Reports.Reports
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             sqlDataAdapter.Fill(dtTax);
-                    
+
             grdData.DataSource = dtTax;
 
-                string[] hideCols =
-                {
-                "ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
-                };
+                //string[] hideCols =
+                //{
+                //"ADDRESS1", "PHONE1", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
+                //};
 
-                foreach (string col in hideCols)
-                {
-                    if (grdData.Columns.Contains(col))
-                    {
-                        grdData.Columns[col].Visible = false;
-                    }
-                }
+                //foreach (string col in hideCols)
+                //{
+                //    if (grdData.Columns.Contains(col))
+                //    {
+                //        grdData.Columns[col].Visible = false;
+                //    }
+                //}
 
             }
             catch (Exception ex)
@@ -173,15 +169,15 @@ namespace Berri_X1_Reports.Reports
             }
             else if (cmbReportType.Text == "Purchase Return")
             {
-                reportName = "psp_TAX_REPORT_PURCHASE_RETURN_IW";
+                reportName = "psp_TAX_REPORT_PURCHASE_RETURN_ITW";
             }
             else if (cmbReportType.Text == "Invoice")
             {
-                reportName = "psp_TAX_REPORT_INVOICE_IW";
+                reportName = "psp_TAX_REPORT_INVOICE_ITW";
             }
             else if (cmbReportType.Text == "Invoice Return")
             {
-                reportName = "psp_TAX_REPORT_INVOICE_RETURN_IW";
+                reportName = "psp_TAX_REPORT_INVOICE_RETURN_ITW";
             }
             else
             {

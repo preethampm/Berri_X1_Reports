@@ -1,6 +1,6 @@
 ﻿namespace Berri_X1_Reports.Reports
 {
-    partial class rptTaxReportItemWise
+    partial class rptTaxReportItemWiseI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTaxReportItemWise));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTaxReportItemWiseI));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.lblTo = new System.Windows.Forms.Label();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.lblFrom = new System.Windows.Forms.Label();
             this.btnRemoveBranch = new System.Windows.Forms.Button();
             this.btnBrnLookup = new System.Windows.Forms.Button();
@@ -47,6 +45,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -56,11 +56,11 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTop.Controls.Add(this.dtpTo);
+            this.pnlTop.Controls.Add(this.dtpFrom);
             this.pnlTop.Controls.Add(this.label1);
             this.pnlTop.Controls.Add(this.cmbReportType);
             this.pnlTop.Controls.Add(this.lblTo);
-            this.pnlTop.Controls.Add(this.dtpFrom);
-            this.pnlTop.Controls.Add(this.dtpTo);
             this.pnlTop.Controls.Add(this.lblFrom);
             this.pnlTop.Controls.Add(this.btnRemoveBranch);
             this.pnlTop.Controls.Add(this.btnBrnLookup);
@@ -92,8 +92,7 @@
             "",
             "Purchase",
             "Purchase Return",
-            "Invoice",
-            "Invoice Return"});
+            "Purchase All"});
             this.cmbReportType.Location = new System.Drawing.Point(605, 13);
             this.cmbReportType.Name = "cmbReportType";
             this.cmbReportType.Size = new System.Drawing.Size(163, 21);
@@ -108,23 +107,6 @@
             this.lblTo.Size = new System.Drawing.Size(40, 17);
             this.lblTo.TabIndex = 163;
             this.lblTo.Text = "From";
-            // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(154, 45);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(114, 20);
-            this.dtpFrom.TabIndex = 161;
-            this.dtpFrom.Value = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
-            // 
-            // dtpTo
-            // 
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(316, 45);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(107, 20);
-            this.dtpTo.TabIndex = 162;
             // 
             // lblFrom
             // 
@@ -283,7 +265,25 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // rptTaxReportItemWise
+            // dtpFrom
+            // 
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.Location = new System.Drawing.Point(154, 44);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(114, 20);
+            this.dtpFrom.TabIndex = 169;
+            this.dtpFrom.Value = new System.DateTime(2025, 12, 24, 0, 0, 0, 0);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.Location = new System.Drawing.Point(317, 45);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(107, 20);
+            this.dtpTo.TabIndex = 170;
+            this.dtpTo.Value = new System.DateTime(2026, 1, 5, 0, 0, 0, 0);
+            // 
+            // rptTaxReportItemWiseI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,7 +291,7 @@
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
-            this.Name = "rptTaxReportItemWise";
+            this.Name = "rptTaxReportItemWiseI";
             this.Text = "Tax Report (Item Wise)";
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
@@ -307,8 +307,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbReportType;
         private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.DateTimePicker dtpFrom;
-        private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Button btnRemoveBranch;
         private System.Windows.Forms.Button btnBrnLookup;
@@ -321,5 +319,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.DateTimePicker dtpTo;
     }
 }

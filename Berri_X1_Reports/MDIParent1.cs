@@ -25,36 +25,6 @@ namespace Berri_X1_Reports
             InitializeComponent();
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
-        }
-
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //rptPurchaseReports rptprch = new rptPurchaseReports();
@@ -274,20 +244,36 @@ namespace Berri_X1_Reports
             rptCancelledItems.Show();
         }
 
-        private void invoiceWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void invoiceWiseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            rptTaxReportInvoiceWise rptTaxReportInvoiceWise = new rptTaxReportInvoiceWise();
-            rptTaxReportInvoiceWise.MdiParent = this;
-            rptTaxReportInvoiceWise.StartPosition = FormStartPosition.CenterParent;
-            rptTaxReportInvoiceWise.Show();
+            rptTaxReportInvoiceWiseI rptTaxReportInvoiceWiseI = new rptTaxReportInvoiceWiseI();
+            rptTaxReportInvoiceWiseI.MdiParent = this;
+            rptTaxReportInvoiceWiseI.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportInvoiceWiseI.Show();
         }
 
-        private void itemsWiseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void itemWiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rptTaxReportItemWise rptTaxReportItemWise = new rptTaxReportItemWise();
-            rptTaxReportItemWise.MdiParent = this;
-            rptTaxReportItemWise.StartPosition = FormStartPosition.CenterParent;
-            rptTaxReportItemWise.Show();
+            rptTaxReportItemWiseI rptTaxReportItemWiseI = new rptTaxReportItemWiseI();
+            rptTaxReportItemWiseI.MdiParent = this;
+            rptTaxReportItemWiseI.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportItemWiseI.Show();
+        }
+
+        private void invoiceWiseToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            rptTaxReportInvoiceWiseO rptTaxReportInvoiceWiseO = new rptTaxReportInvoiceWiseO();
+            rptTaxReportInvoiceWiseO.MdiParent = this;
+            rptTaxReportInvoiceWiseO.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportInvoiceWiseO.Show();
+        }
+
+        private void itemWiseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rptTaxReportItemWiseO rptTaxReportItemWiseO = new rptTaxReportItemWiseO();
+            rptTaxReportItemWiseO.MdiParent = this;
+            rptTaxReportItemWiseO.StartPosition = FormStartPosition.CenterParent;
+            rptTaxReportItemWiseO.Show();
         }
     }
 }
