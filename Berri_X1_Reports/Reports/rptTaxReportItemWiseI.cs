@@ -55,9 +55,9 @@ namespace Berri_X1_Reports.Reports
             {
                 procedureName = "psp_TR_PURCHASE_RETURN_ITW";
             }
-            else if (cmbReportType.Text == "Purchase ALL")
+            else if (cmbReportType.Text == "Purchase All")
             {
-                procedureName = "psp_TR_PURCHASE_ALL_IW";
+                procedureName = "psp_TR_PURCHASE_ITW_ALL";
             }
             else
             {

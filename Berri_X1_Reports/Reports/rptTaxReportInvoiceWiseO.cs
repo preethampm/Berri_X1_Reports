@@ -62,7 +62,7 @@ namespace Berri_X1_Reports.Reports
             }
             else if (cmbReportType.Text == "Invoice All")
             {
-                procedureName = "psp_TR_INVOICE_ALL_IW";
+                procedureName = "psp_TR_INVOICE_IW_ALL";
             }
             else
             {
