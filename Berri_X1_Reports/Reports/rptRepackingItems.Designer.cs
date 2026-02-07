@@ -30,45 +30,47 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptRepackingItems));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.cmbBrand = new System.Windows.Forms.ComboBox();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.lblDivison = new System.Windows.Forms.Label();
+            this.cmbDivision = new System.Windows.Forms.ComboBox();
             this.cmbSubCategory = new System.Windows.Forms.ComboBox();
             this.lblSubCategory = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnItemLookup = new System.Windows.Forms.Button();
+            this.txtItemCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbReportType = new System.Windows.Forms.ComboBox();
+            this.lblReportType = new System.Windows.Forms.Label();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.lblItem = new System.Windows.Forms.Label();
+            this.btnRemoveBranch = new System.Windows.Forms.Button();
+            this.btnBrnLookup = new System.Windows.Forms.Button();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.txtBranches = new System.Windows.Forms.TextBox();
+            this.btnRemoveBarcode = new System.Windows.Forms.Button();
+            this.btnBarcodeLookup = new System.Windows.Forms.Button();
+            this.txtBarcodeCode = new System.Windows.Forms.TextBox();
+            this.btnRemoveSupplier = new System.Windows.Forms.Button();
+            this.btnSupplierLookup = new System.Windows.Forms.Button();
+            this.txtSupplier = new System.Windows.Forms.TextBox();
+            this.lblSupplier = new System.Windows.Forms.Label();
+            this.lblBarcode = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.lblFrom = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.lblDepartment = new System.Windows.Forms.Label();
             this.grdData = new System.Windows.Forms.DataGridView();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
-            this.lblBarcode = new System.Windows.Forms.Label();
-            this.lblSupplier = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnRemoveBranch = new System.Windows.Forms.Button();
-            this.btnBrnLookup = new System.Windows.Forms.Button();
-            this.lblBranch = new System.Windows.Forms.Label();
-            this.txtBranches = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblItem = new System.Windows.Forms.Label();
-            this.cmbReportType = new System.Windows.Forms.ComboBox();
-            this.lblReportType = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.lblDivison = new System.Windows.Forms.Label();
-            this.cmbDivision = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -78,101 +80,438 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTop.Controls.Add(this.cmbBrand);
+            this.pnlTop.Controls.Add(this.lblBrand);
             this.pnlTop.Controls.Add(this.lblDivison);
             this.pnlTop.Controls.Add(this.cmbDivision);
-            this.pnlTop.Controls.Add(this.button3);
-            this.pnlTop.Controls.Add(this.button4);
-            this.pnlTop.Controls.Add(this.textBox4);
+            this.pnlTop.Controls.Add(this.cmbSubCategory);
+            this.pnlTop.Controls.Add(this.lblSubCategory);
+            this.pnlTop.Controls.Add(this.cmbDepartment);
+            this.pnlTop.Controls.Add(this.cmbCategory);
+            this.pnlTop.Controls.Add(this.lblCategory);
+            this.pnlTop.Controls.Add(this.lblDepartment);
+            this.pnlTop.Controls.Add(this.btnRemoveItem);
+            this.pnlTop.Controls.Add(this.btnItemLookup);
+            this.pnlTop.Controls.Add(this.txtItemCode);
             this.pnlTop.Controls.Add(this.label1);
             this.pnlTop.Controls.Add(this.cmbReportType);
             this.pnlTop.Controls.Add(this.lblReportType);
-            this.pnlTop.Controls.Add(this.textBox2);
+            this.pnlTop.Controls.Add(this.txtItemName);
             this.pnlTop.Controls.Add(this.lblItem);
             this.pnlTop.Controls.Add(this.btnRemoveBranch);
             this.pnlTop.Controls.Add(this.btnBrnLookup);
             this.pnlTop.Controls.Add(this.lblBranch);
             this.pnlTop.Controls.Add(this.txtBranches);
-            this.pnlTop.Controls.Add(this.button5);
-            this.pnlTop.Controls.Add(this.button6);
-            this.pnlTop.Controls.Add(this.textBox3);
-            this.pnlTop.Controls.Add(this.button1);
-            this.pnlTop.Controls.Add(this.button2);
-            this.pnlTop.Controls.Add(this.textBox1);
+            this.pnlTop.Controls.Add(this.btnRemoveBarcode);
+            this.pnlTop.Controls.Add(this.btnBarcodeLookup);
+            this.pnlTop.Controls.Add(this.txtBarcodeCode);
+            this.pnlTop.Controls.Add(this.btnRemoveSupplier);
+            this.pnlTop.Controls.Add(this.btnSupplierLookup);
+            this.pnlTop.Controls.Add(this.txtSupplier);
             this.pnlTop.Controls.Add(this.lblSupplier);
             this.pnlTop.Controls.Add(this.lblBarcode);
-            this.pnlTop.Controls.Add(this.cmbSubCategory);
-            this.pnlTop.Controls.Add(this.lblSubCategory);
             this.pnlTop.Controls.Add(this.lblTo);
             this.pnlTop.Controls.Add(this.dtpFrom);
             this.pnlTop.Controls.Add(this.dtpTo);
             this.pnlTop.Controls.Add(this.lblFrom);
             this.pnlTop.Controls.Add(this.comboBox1);
-            this.pnlTop.Controls.Add(this.cmbDepartment);
-            this.pnlTop.Controls.Add(this.cmbCategory);
-            this.pnlTop.Controls.Add(this.lblCategory);
-            this.pnlTop.Controls.Add(this.lblDepartment);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1284, 168);
             this.pnlTop.TabIndex = 13;
             // 
+            // cmbBrand
+            // 
+            this.cmbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBrand.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBrand.FormattingEnabled = true;
+            this.cmbBrand.Location = new System.Drawing.Point(624, 72);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(264, 25);
+            this.cmbBrand.TabIndex = 211;
+            // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblBrand.ForeColor = System.Drawing.Color.Black;
+            this.lblBrand.Location = new System.Drawing.Point(573, 74);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(42, 17);
+            this.lblBrand.TabIndex = 210;
+            this.lblBrand.Text = "Brand";
+            // 
+            // lblDivison
+            // 
+            this.lblDivison.AutoSize = true;
+            this.lblDivison.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblDivison.ForeColor = System.Drawing.Color.Black;
+            this.lblDivison.Location = new System.Drawing.Point(933, 109);
+            this.lblDivison.Name = "lblDivison";
+            this.lblDivison.Size = new System.Drawing.Size(54, 17);
+            this.lblDivison.TabIndex = 208;
+            this.lblDivison.Text = "Division";
+            // 
+            // cmbDivision
+            // 
+            this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDivision.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDivision.FormattingEnabled = true;
+            this.cmbDivision.Location = new System.Drawing.Point(993, 106);
+            this.cmbDivision.Name = "cmbDivision";
+            this.cmbDivision.Size = new System.Drawing.Size(264, 25);
+            this.cmbDivision.TabIndex = 209;
+            // 
             // cmbSubCategory
             // 
             this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubCategory.FormattingEnabled = true;
-            this.cmbSubCategory.Location = new System.Drawing.Point(993, 69);
+            this.cmbSubCategory.Location = new System.Drawing.Point(993, 134);
             this.cmbSubCategory.Name = "cmbSubCategory";
             this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
-            this.cmbSubCategory.TabIndex = 175;
+            this.cmbSubCategory.TabIndex = 207;
             // 
             // lblSubCategory
             // 
             this.lblSubCategory.AutoSize = true;
             this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblSubCategory.Location = new System.Drawing.Point(897, 69);
+            this.lblSubCategory.Location = new System.Drawing.Point(897, 134);
             this.lblSubCategory.Name = "lblSubCategory";
             this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
-            this.lblSubCategory.TabIndex = 174;
+            this.lblSubCategory.TabIndex = 206;
             this.lblSubCategory.Text = "Sub-Category";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(624, 103);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(264, 25);
+            this.cmbDepartment.TabIndex = 205;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(624, 134);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(264, 25);
+            this.cmbCategory.TabIndex = 204;
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblCategory.ForeColor = System.Drawing.Color.Black;
+            this.lblCategory.Location = new System.Drawing.Point(554, 137);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(64, 17);
+            this.lblCategory.TabIndex = 202;
+            this.lblCategory.Text = "Category";
+            // 
+            // lblDepartment
+            // 
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblDepartment.ForeColor = System.Drawing.Color.Black;
+            this.lblDepartment.Location = new System.Drawing.Point(539, 106);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(81, 17);
+            this.lblDepartment.TabIndex = 203;
+            this.lblDepartment.Text = "Department";
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveItem.BackgroundImage")));
+            this.btnRemoveItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveItem.Location = new System.Drawing.Point(900, 9);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(24, 23);
+            this.btnRemoveItem.TabIndex = 199;
+            this.btnRemoveItem.Tag = "SRCH";
+            this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // btnItemLookup
+            // 
+            this.btnItemLookup.BackColor = System.Drawing.Color.Transparent;
+            this.btnItemLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnItemLookup.FlatAppearance.BorderSize = 0;
+            this.btnItemLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItemLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnItemLookup.Image")));
+            this.btnItemLookup.Location = new System.Drawing.Point(870, 10);
+            this.btnItemLookup.Name = "btnItemLookup";
+            this.btnItemLookup.Size = new System.Drawing.Size(24, 23);
+            this.btnItemLookup.TabIndex = 198;
+            this.btnItemLookup.Tag = "SRCH";
+            this.btnItemLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnItemLookup.UseVisualStyleBackColor = false;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemCode.Location = new System.Drawing.Point(624, 10);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.ReadOnly = true;
+            this.txtItemCode.Size = new System.Drawing.Size(239, 22);
+            this.txtItemCode.TabIndex = 197;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(544, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 196;
+            this.label1.Text = "Item Code";
+            // 
+            // cmbReportType
+            // 
+            this.cmbReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReportType.FormattingEnabled = true;
+            this.cmbReportType.Items.AddRange(new object[] {
+            "",
+            "Summary",
+            "Detailed"});
+            this.cmbReportType.Location = new System.Drawing.Point(131, 126);
+            this.cmbReportType.Name = "cmbReportType";
+            this.cmbReportType.Size = new System.Drawing.Size(299, 21);
+            this.cmbReportType.TabIndex = 195;
+            // 
+            // lblReportType
+            // 
+            this.lblReportType.AutoSize = true;
+            this.lblReportType.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportType.Location = new System.Drawing.Point(49, 127);
+            this.lblReportType.Name = "lblReportType";
+            this.lblReportType.Size = new System.Drawing.Size(78, 17);
+            this.lblReportType.TabIndex = 194;
+            this.lblReportType.Text = "Report Type";
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemName.Location = new System.Drawing.Point(131, 69);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.ReadOnly = true;
+            this.txtItemName.Size = new System.Drawing.Size(299, 22);
+            this.txtItemName.TabIndex = 193;
+            // 
+            // lblItem
+            // 
+            this.lblItem.AutoSize = true;
+            this.lblItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItem.Location = new System.Drawing.Point(92, 70);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(35, 17);
+            this.lblItem.TabIndex = 192;
+            this.lblItem.Text = "Item";
+            // 
+            // btnRemoveBranch
+            // 
+            this.btnRemoveBranch.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveBranch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBranch.BackgroundImage")));
+            this.btnRemoveBranch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveBranch.FlatAppearance.BorderSize = 0;
+            this.btnRemoveBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveBranch.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveBranch.Location = new System.Drawing.Point(406, 36);
+            this.btnRemoveBranch.Name = "btnRemoveBranch";
+            this.btnRemoveBranch.Size = new System.Drawing.Size(24, 23);
+            this.btnRemoveBranch.TabIndex = 191;
+            this.btnRemoveBranch.Tag = "SRCH";
+            this.btnRemoveBranch.UseVisualStyleBackColor = false;
+            // 
+            // btnBrnLookup
+            // 
+            this.btnBrnLookup.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrnLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBrnLookup.FlatAppearance.BorderSize = 0;
+            this.btnBrnLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrnLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrnLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnBrnLookup.Image")));
+            this.btnBrnLookup.Location = new System.Drawing.Point(376, 37);
+            this.btnBrnLookup.Name = "btnBrnLookup";
+            this.btnBrnLookup.Size = new System.Drawing.Size(24, 23);
+            this.btnBrnLookup.TabIndex = 190;
+            this.btnBrnLookup.Tag = "SRCH";
+            this.btnBrnLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnBrnLookup.UseVisualStyleBackColor = false;
+            this.btnBrnLookup.Click += new System.EventHandler(this.btnBrnLookup_Click);
+            // 
+            // lblBranch
+            // 
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.Location = new System.Drawing.Point(76, 40);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(49, 17);
+            this.lblBranch.TabIndex = 189;
+            this.lblBranch.Text = "Branch";
+            // 
+            // txtBranches
+            // 
+            this.txtBranches.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBranches.Location = new System.Drawing.Point(131, 37);
+            this.txtBranches.Name = "txtBranches";
+            this.txtBranches.ReadOnly = true;
+            this.txtBranches.Size = new System.Drawing.Size(239, 22);
+            this.txtBranches.TabIndex = 188;
+            // 
+            // btnRemoveBarcode
+            // 
+            this.btnRemoveBarcode.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveBarcode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBarcode.BackgroundImage")));
+            this.btnRemoveBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveBarcode.FlatAppearance.BorderSize = 0;
+            this.btnRemoveBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveBarcode.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveBarcode.Location = new System.Drawing.Point(406, 96);
+            this.btnRemoveBarcode.Name = "btnRemoveBarcode";
+            this.btnRemoveBarcode.Size = new System.Drawing.Size(24, 23);
+            this.btnRemoveBarcode.TabIndex = 187;
+            this.btnRemoveBarcode.Tag = "SRCH";
+            this.btnRemoveBarcode.UseVisualStyleBackColor = false;
+            this.btnRemoveBarcode.Click += new System.EventHandler(this.btnRemoveBarcode_Click);
+            // 
+            // btnBarcodeLookup
+            // 
+            this.btnBarcodeLookup.BackColor = System.Drawing.Color.Transparent;
+            this.btnBarcodeLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBarcodeLookup.FlatAppearance.BorderSize = 0;
+            this.btnBarcodeLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarcodeLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarcodeLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnBarcodeLookup.Image")));
+            this.btnBarcodeLookup.Location = new System.Drawing.Point(376, 97);
+            this.btnBarcodeLookup.Name = "btnBarcodeLookup";
+            this.btnBarcodeLookup.Size = new System.Drawing.Size(24, 23);
+            this.btnBarcodeLookup.TabIndex = 186;
+            this.btnBarcodeLookup.Tag = "SRCH";
+            this.btnBarcodeLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnBarcodeLookup.UseVisualStyleBackColor = false;
+            this.btnBarcodeLookup.Click += new System.EventHandler(this.btnBarcodeLookup_Click);
+            // 
+            // txtBarcodeCode
+            // 
+            this.txtBarcodeCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarcodeCode.Location = new System.Drawing.Point(131, 97);
+            this.txtBarcodeCode.Name = "txtBarcodeCode";
+            this.txtBarcodeCode.ReadOnly = true;
+            this.txtBarcodeCode.Size = new System.Drawing.Size(239, 22);
+            this.txtBarcodeCode.TabIndex = 185;
+            // 
+            // btnRemoveSupplier
+            // 
+            this.btnRemoveSupplier.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveSupplier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveSupplier.BackgroundImage")));
+            this.btnRemoveSupplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveSupplier.FlatAppearance.BorderSize = 0;
+            this.btnRemoveSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveSupplier.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveSupplier.Location = new System.Drawing.Point(899, 39);
+            this.btnRemoveSupplier.Name = "btnRemoveSupplier";
+            this.btnRemoveSupplier.Size = new System.Drawing.Size(24, 23);
+            this.btnRemoveSupplier.TabIndex = 180;
+            this.btnRemoveSupplier.Tag = "SRCH";
+            this.btnRemoveSupplier.UseVisualStyleBackColor = false;
+            this.btnRemoveSupplier.Click += new System.EventHandler(this.btnRemoveSupplier_Click);
+            // 
+            // btnSupplierLookup
+            // 
+            this.btnSupplierLookup.BackColor = System.Drawing.Color.Transparent;
+            this.btnSupplierLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSupplierLookup.FlatAppearance.BorderSize = 0;
+            this.btnSupplierLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplierLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplierLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplierLookup.Image")));
+            this.btnSupplierLookup.Location = new System.Drawing.Point(869, 40);
+            this.btnSupplierLookup.Name = "btnSupplierLookup";
+            this.btnSupplierLookup.Size = new System.Drawing.Size(24, 23);
+            this.btnSupplierLookup.TabIndex = 179;
+            this.btnSupplierLookup.Tag = "SRCH";
+            this.btnSupplierLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnSupplierLookup.UseVisualStyleBackColor = false;
+            this.btnSupplierLookup.Click += new System.EventHandler(this.btnSupplierLookup_Click);
+            // 
+            // txtSupplier
+            // 
+            this.txtSupplier.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplier.Location = new System.Drawing.Point(624, 40);
+            this.txtSupplier.Name = "txtSupplier";
+            this.txtSupplier.ReadOnly = true;
+            this.txtSupplier.Size = new System.Drawing.Size(239, 22);
+            this.txtSupplier.TabIndex = 178;
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.AutoSize = true;
+            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplier.Location = new System.Drawing.Point(559, 44);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(56, 17);
+            this.lblSupplier.TabIndex = 177;
+            this.lblSupplier.Text = "Supplier";
+            // 
+            // lblBarcode
+            // 
+            this.lblBarcode.AutoSize = true;
+            this.lblBarcode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarcode.Location = new System.Drawing.Point(63, 101);
+            this.lblBarcode.Name = "lblBarcode";
+            this.lblBarcode.Size = new System.Drawing.Size(59, 17);
+            this.lblBarcode.TabIndex = 176;
+            this.lblBarcode.Text = "Barcode";
             // 
             // lblTo
             // 
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTo.Location = new System.Drawing.Point(52, 15);
+            this.lblTo.Location = new System.Drawing.Point(101, 13);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(37, 17);
+            this.lblTo.Size = new System.Drawing.Size(21, 17);
             this.lblTo.TabIndex = 163;
-            this.lblTo.Text = "From";
+            this.lblTo.Text = "To";
             // 
             // dtpFrom
             // 
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(95, 12);
+            this.dtpFrom.Location = new System.Drawing.Point(131, 12);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(114, 20);
             this.dtpFrom.TabIndex = 161;
+            this.dtpFrom.Value = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
             // 
             // dtpTo
             // 
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(287, 13);
+            this.dtpTo.Location = new System.Drawing.Point(323, 13);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(107, 20);
             this.dtpTo.TabIndex = 162;
+            this.dtpTo.Value = new System.DateTime(2026, 1, 15, 0, 0, 0, 0);
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrom.Location = new System.Drawing.Point(260, 15);
+            this.lblFrom.Location = new System.Drawing.Point(280, 13);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(21, 17);
+            this.lblFrom.Size = new System.Drawing.Size(37, 17);
             this.lblFrom.TabIndex = 164;
-            this.lblFrom.Text = "To";
+            this.lblFrom.Text = "From";
             // 
             // comboBox1
             // 
@@ -188,48 +527,6 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Visible = false;
             // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDepartment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(624, 38);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(264, 25);
-            this.cmbDepartment.TabIndex = 134;
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(624, 69);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(264, 25);
-            this.cmbCategory.TabIndex = 133;
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(554, 72);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(64, 17);
-            this.lblCategory.TabIndex = 124;
-            this.lblCategory.Text = "Category";
-            // 
-            // lblDepartment
-            // 
-            this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblDepartment.ForeColor = System.Drawing.Color.Black;
-            this.lblDepartment.Location = new System.Drawing.Point(539, 41);
-            this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(81, 17);
-            this.lblDepartment.TabIndex = 126;
-            this.lblDepartment.Text = "Department";
-            // 
             // grdData
             // 
             this.grdData.AllowUserToAddRows = false;
@@ -243,7 +540,7 @@
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdData.Location = new System.Drawing.Point(0, 168);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1284, 493);
+            this.grdData.Size = new System.Drawing.Size(1284, 643);
             this.grdData.TabIndex = 14;
             // 
             // pnlBottom
@@ -253,7 +550,7 @@
             this.pnlBottom.Controls.Add(this.btnPrint);
             this.pnlBottom.Controls.Add(this.btnView);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 616);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 766);
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(1284, 45);
             this.pnlBottom.TabIndex = 15;
@@ -267,7 +564,7 @@
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 37);
             this.btnFilter.TabIndex = 5;
-            this.btnFilter.Text = "Filter";
+            this.btnFilter.Text = "Hide Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
             // 
             // btnClose
@@ -281,6 +578,7 @@
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPrint
             // 
@@ -305,282 +603,19 @@
             this.btnView.TabIndex = 0;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
-            // 
-            // lblBarcode
-            // 
-            this.lblBarcode.AutoSize = true;
-            this.lblBarcode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarcode.Location = new System.Drawing.Point(27, 101);
-            this.lblBarcode.Name = "lblBarcode";
-            this.lblBarcode.Size = new System.Drawing.Size(59, 17);
-            this.lblBarcode.TabIndex = 176;
-            this.lblBarcode.Text = "Barcode";
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.AutoSize = true;
-            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.Location = new System.Drawing.Point(559, 103);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(56, 17);
-            this.lblSupplier.TabIndex = 177;
-            this.lblSupplier.Text = "Supplier";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(624, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(239, 22);
-            this.textBox1.TabIndex = 178;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(370, 96);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(24, 23);
-            this.button5.TabIndex = 187;
-            this.button5.Tag = "SRCH";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(340, 97);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 23);
-            this.button6.TabIndex = 186;
-            this.button6.Tag = "SRCH";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(95, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(239, 22);
-            this.textBox3.TabIndex = 185;
-            // 
-            // btnRemoveBranch
-            // 
-            this.btnRemoveBranch.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveBranch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveBranch.BackgroundImage")));
-            this.btnRemoveBranch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRemoveBranch.FlatAppearance.BorderSize = 0;
-            this.btnRemoveBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveBranch.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBranch.Location = new System.Drawing.Point(370, 36);
-            this.btnRemoveBranch.Name = "btnRemoveBranch";
-            this.btnRemoveBranch.Size = new System.Drawing.Size(24, 23);
-            this.btnRemoveBranch.TabIndex = 191;
-            this.btnRemoveBranch.Tag = "SRCH";
-            this.btnRemoveBranch.UseVisualStyleBackColor = false;
-            // 
-            // btnBrnLookup
-            // 
-            this.btnBrnLookup.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrnLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBrnLookup.FlatAppearance.BorderSize = 0;
-            this.btnBrnLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrnLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrnLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnBrnLookup.Image")));
-            this.btnBrnLookup.Location = new System.Drawing.Point(340, 37);
-            this.btnBrnLookup.Name = "btnBrnLookup";
-            this.btnBrnLookup.Size = new System.Drawing.Size(24, 23);
-            this.btnBrnLookup.TabIndex = 190;
-            this.btnBrnLookup.Tag = "SRCH";
-            this.btnBrnLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnBrnLookup.UseVisualStyleBackColor = false;
-            // 
-            // lblBranch
-            // 
-            this.lblBranch.AutoSize = true;
-            this.lblBranch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBranch.Location = new System.Drawing.Point(40, 40);
-            this.lblBranch.Name = "lblBranch";
-            this.lblBranch.Size = new System.Drawing.Size(49, 17);
-            this.lblBranch.TabIndex = 189;
-            this.lblBranch.Text = "Branch";
-            // 
-            // txtBranches
-            // 
-            this.txtBranches.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBranches.Location = new System.Drawing.Point(95, 37);
-            this.txtBranches.Name = "txtBranches";
-            this.txtBranches.ReadOnly = true;
-            this.txtBranches.Size = new System.Drawing.Size(239, 22);
-            this.txtBranches.TabIndex = 188;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(95, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(299, 22);
-            this.textBox2.TabIndex = 193;
-            // 
-            // lblItem
-            // 
-            this.lblItem.AutoSize = true;
-            this.lblItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.Location = new System.Drawing.Point(56, 70);
-            this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(35, 17);
-            this.lblItem.TabIndex = 192;
-            this.lblItem.Text = "Item";
-            // 
-            // cmbReportType
-            // 
-            this.cmbReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbReportType.FormattingEnabled = true;
-            this.cmbReportType.Items.AddRange(new object[] {
-            "",
-            "Department",
-            "Division",
-            "Category",
-            "Sub Category"});
-            this.cmbReportType.Location = new System.Drawing.Point(95, 126);
-            this.cmbReportType.Name = "cmbReportType";
-            this.cmbReportType.Size = new System.Drawing.Size(299, 21);
-            this.cmbReportType.TabIndex = 195;
-            // 
-            // lblReportType
-            // 
-            this.lblReportType.AutoSize = true;
-            this.lblReportType.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportType.Location = new System.Drawing.Point(13, 127);
-            this.lblReportType.Name = "lblReportType";
-            this.lblReportType.Size = new System.Drawing.Size(78, 17);
-            this.lblReportType.TabIndex = 194;
-            this.lblReportType.Text = "Report Type";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(624, 10);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(239, 22);
-            this.textBox4.TabIndex = 197;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(585, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
-            this.label1.TabIndex = 196;
-            this.label1.Text = "Item Code";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(869, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
-            this.button2.TabIndex = 179;
-            this.button2.Tag = "SRCH";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(899, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 180;
-            this.button1.Tag = "SRCH";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(900, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 23);
-            this.button3.TabIndex = 199;
-            this.button3.Tag = "SRCH";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(870, 10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(24, 23);
-            this.button4.TabIndex = 198;
-            this.button4.Tag = "SRCH";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // lblDivison
-            // 
-            this.lblDivison.AutoSize = true;
-            this.lblDivison.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblDivison.ForeColor = System.Drawing.Color.Black;
-            this.lblDivison.Location = new System.Drawing.Point(933, 44);
-            this.lblDivison.Name = "lblDivison";
-            this.lblDivison.Size = new System.Drawing.Size(54, 17);
-            this.lblDivison.TabIndex = 200;
-            this.lblDivison.Text = "Division";
-            // 
-            // cmbDivision
-            // 
-            this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDivision.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDivision.FormattingEnabled = true;
-            this.cmbDivision.Location = new System.Drawing.Point(993, 41);
-            this.cmbDivision.Name = "cmbDivision";
-            this.cmbDivision.Size = new System.Drawing.Size(264, 25);
-            this.cmbDivision.TabIndex = 201;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // rptRepackingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.ClientSize = new System.Drawing.Size(1284, 811);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
             this.Name = "rptRepackingItems";
             this.Text = "Repacking Items";
+            this.Load += new System.EventHandler(this.rptRepackingItems_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
@@ -592,17 +627,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.ComboBox cmbSubCategory;
-        private System.Windows.Forms.Label lblSubCategory;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpFrom;
         private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cmbDepartment;
-        private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.DataGridView grdData;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Button btnFilter;
@@ -611,25 +640,33 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblBarcode;
         private System.Windows.Forms.Label lblSupplier;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Button btnRemoveBranch;
         private System.Windows.Forms.Button btnBrnLookup;
         private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.TextBox txtBranches;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnRemoveBarcode;
+        private System.Windows.Forms.Button btnBarcodeLookup;
+        private System.Windows.Forms.TextBox txtBarcodeCode;
         private System.Windows.Forms.ComboBox cmbReportType;
         private System.Windows.Forms.Label lblReportType;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnRemoveItem;
+        private System.Windows.Forms.Button btnItemLookup;
+        private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRemoveSupplier;
+        private System.Windows.Forms.Button btnSupplierLookup;
         private System.Windows.Forms.Label lblDivison;
         private System.Windows.Forms.ComboBox cmbDivision;
+        private System.Windows.Forms.ComboBox cmbSubCategory;
+        private System.Windows.Forms.Label lblSubCategory;
+        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblDepartment;
+        private System.Windows.Forms.ComboBox cmbBrand;
+        private System.Windows.Forms.Label lblBrand;
     }
 }

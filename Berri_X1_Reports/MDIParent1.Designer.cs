@@ -43,15 +43,16 @@
             this.cancelledItemsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceWiseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceWiseToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemWiseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.purhaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.invoiceWiseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemWiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.invoiceWiseToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemWiseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.repackingItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +94,8 @@
             this.dailyToolStripMenuItem,
             this.periodicSalesReportToolStripMenuItem,
             this.cancelledItemsReportToolStripMenuItem,
-            this.TRToolStripMenuItem});
+            this.TRToolStripMenuItem,
+            this.repackingItemsToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -166,8 +168,22 @@
             this.invoiceWiseToolStripMenuItem1,
             this.itemWiseToolStripMenuItem});
             this.invoiceWiseToolStripMenuItem.Name = "invoiceWiseToolStripMenuItem";
-            this.invoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.invoiceWiseToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.invoiceWiseToolStripMenuItem.Text = "Inward";
+            // 
+            // invoiceWiseToolStripMenuItem1
+            // 
+            this.invoiceWiseToolStripMenuItem1.Name = "invoiceWiseToolStripMenuItem1";
+            this.invoiceWiseToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.invoiceWiseToolStripMenuItem1.Text = "Invoice Wise";
+            this.invoiceWiseToolStripMenuItem1.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem1_Click);
+            // 
+            // itemWiseToolStripMenuItem
+            // 
+            this.itemWiseToolStripMenuItem.Name = "itemWiseToolStripMenuItem";
+            this.itemWiseToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.itemWiseToolStripMenuItem.Text = "Item Wise";
+            this.itemWiseToolStripMenuItem.Click += new System.EventHandler(this.itemWiseToolStripMenuItem_Click);
             // 
             // itemsWiseToolStripMenuItem
             // 
@@ -175,8 +191,22 @@
             this.invoiceWiseToolStripMenuItem2,
             this.itemWiseToolStripMenuItem1});
             this.itemsWiseToolStripMenuItem.Name = "itemsWiseToolStripMenuItem";
-            this.itemsWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itemsWiseToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.itemsWiseToolStripMenuItem.Text = "Outward";
+            // 
+            // invoiceWiseToolStripMenuItem2
+            // 
+            this.invoiceWiseToolStripMenuItem2.Name = "invoiceWiseToolStripMenuItem2";
+            this.invoiceWiseToolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
+            this.invoiceWiseToolStripMenuItem2.Text = "Invoice Wise";
+            this.invoiceWiseToolStripMenuItem2.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem2_Click);
+            // 
+            // itemWiseToolStripMenuItem1
+            // 
+            this.itemWiseToolStripMenuItem1.Name = "itemWiseToolStripMenuItem1";
+            this.itemWiseToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.itemWiseToolStripMenuItem1.Text = "Item Wise";
+            this.itemWiseToolStripMenuItem1.Click += new System.EventHandler(this.itemWiseToolStripMenuItem1_Click);
             // 
             // purhaseToolStripMenuItem
             // 
@@ -205,33 +235,12 @@
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
             // 
-            // invoiceWiseToolStripMenuItem1
+            // repackingItemsToolStripMenuItem
             // 
-            this.invoiceWiseToolStripMenuItem1.Name = "invoiceWiseToolStripMenuItem1";
-            this.invoiceWiseToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.invoiceWiseToolStripMenuItem1.Text = "Invoice Wise";
-            this.invoiceWiseToolStripMenuItem1.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem1_Click);
-            // 
-            // itemWiseToolStripMenuItem
-            // 
-            this.itemWiseToolStripMenuItem.Name = "itemWiseToolStripMenuItem";
-            this.itemWiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.itemWiseToolStripMenuItem.Text = "Item Wise";
-            this.itemWiseToolStripMenuItem.Click += new System.EventHandler(this.itemWiseToolStripMenuItem_Click);
-            // 
-            // invoiceWiseToolStripMenuItem2
-            // 
-            this.invoiceWiseToolStripMenuItem2.Name = "invoiceWiseToolStripMenuItem2";
-            this.invoiceWiseToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.invoiceWiseToolStripMenuItem2.Text = "Invoice Wise";
-            this.invoiceWiseToolStripMenuItem2.Click += new System.EventHandler(this.invoiceWiseToolStripMenuItem2_Click);
-            // 
-            // itemWiseToolStripMenuItem1
-            // 
-            this.itemWiseToolStripMenuItem1.Name = "itemWiseToolStripMenuItem1";
-            this.itemWiseToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.itemWiseToolStripMenuItem1.Text = "Item Wise";
-            this.itemWiseToolStripMenuItem1.Click += new System.EventHandler(this.itemWiseToolStripMenuItem1_Click);
+            this.repackingItemsToolStripMenuItem.Name = "repackingItemsToolStripMenuItem";
+            this.repackingItemsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.repackingItemsToolStripMenuItem.Text = "Repacking Items";
+            this.repackingItemsToolStripMenuItem.Click += new System.EventHandler(this.repackingItemsToolStripMenuItem_Click);
             // 
             // MainFrom
             // 
@@ -279,6 +288,7 @@
         private System.Windows.Forms.ToolStripMenuItem itemWiseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem invoiceWiseToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem itemWiseToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem repackingItemsToolStripMenuItem;
     }
 }
 
