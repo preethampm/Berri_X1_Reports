@@ -49,9 +49,15 @@ namespace Berri_X1_Reports.Reports
             {
                 sp = "psp_REPORT_REPACKING_DETAILS_SUMMARY";
             }
-            else
+            else if (cmbReportType.Text == "Detailed")
             {
                 sp = "psp_REPORT_REPACKING_DETAILS_DETAILED";
+            }
+            else
+            {
+                MessageBox.Show("Please select a Report Type.");
+                cmbReportType.Focus();
+                return;
             }
 
             try
@@ -62,16 +68,15 @@ namespace Berri_X1_Reports.Reports
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 SqlParameter[] values =
                 {
-                    new SqlParameter("@branchids", dtBrnids),
-                    new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                    new SqlParameter("@todate", dtpTo.Value.Date),
-                    new SqlParameter("@brand", cmbBrand.Text),
-                    new SqlParameter("@department", cmbDepartment.Text),
-                    new SqlParameter("@division", cmbDivision.Text),
-                    new SqlParameter("@category", cmbCategory.Text),
-                    new SqlParameter("@barcode", txtBarcodeCode.Text),
-                    new SqlParameter("@itemcode", txtItemCode.Text),
-                };
+                new SqlParameter("@branchids", dtBrnids),
+                new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                new SqlParameter("@todate", dtpTo.Value.Date),
+                new SqlParameter("@department", cmbDepartment.Text),
+                new SqlParameter("@division", cmbDivision.Text),
+                new SqlParameter("@category", cmbCategory.Text),
+                new SqlParameter("@barcode", txtBarcodeCode.Text),
+                new SqlParameter("@itemcode", txtItemCode.Text),
+            };
                 sqlCommand.Parameters.AddRange(values);
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -80,6 +85,7 @@ namespace Berri_X1_Reports.Reports
                 grdData.DataSource = dtRepacking;
 
                 grdData.Columns["Branch Id"].Visible = false;
+                grdData.Columns["Branch Name"].Visible = false;
                 grdData.Columns["Address"].Visible = false;
                 grdData.Columns["City"].Visible = false;
                 grdData.Columns["Country"].Visible = false;
@@ -127,9 +133,6 @@ namespace Berri_X1_Reports.Reports
 
         private void rptRepackingItems_Load(object sender, EventArgs e)
         {
-            cmbBrand.DataSource = Masters_PRESENT.GetList("ITEMBRN", "", true, Common_Var.Company.cmpId);
-            cmbBrand.DisplayMember = "Description";
-
             cmbDepartment.DataSource = Masters_PRESENT.GetList("ITEMDEPT", "", true, Common_Var.Company.cmpId);
             cmbDepartment.DisplayMember = "Description";
 
@@ -148,27 +151,6 @@ namespace Berri_X1_Reports.Reports
             GetData();
         }
 
-        private void btnSupplierLookup_Click(object sender, EventArgs e)
-        {
-            frmLookUp frmLkp = new frmLookUp();
-
-            frmLkp.m_table = "PartyMaster P";
-            frmLkp.m_fields = "PM_FirstName,PM_Code";
-            frmLkp.m_dispname = "Supplier,Code";
-            frmLkp.m_condition =
-                "PM_FirstName <> '' " +
-                "AND ISNULL(PM_Type,'') = 'SUPPLIER' " +
-                "AND CMPID = " + Common_Var.Company.cmpId;
-            frmLkp.m_fldwidth = "500,120,0";
-
-            frmLkp.ShowDialog();
-
-            if (frmLkp.m_values.Count > 0)
-            {
-                txtSupplier.Text = frmLkp.m_values[0].ToString(); // Supplier name
-            }
-        }
-
         private void btnItemLookup_Click(object sender, EventArgs e)
         {
             ArrayList lkpValues = new ArrayList();
@@ -179,11 +161,6 @@ namespace Berri_X1_Reports.Reports
                 txtItemName.Text = lkpValues[0].ToString(); // Item Name
                 txtItemCode.Text = lkpValues[1].ToString(); // Item Code
             }
-        }
-
-        private void btnRemoveSupplier_Click(object sender, EventArgs e)
-        {
-            txtSupplier.Text = "";
         }
 
         private void btnRemoveItem_Click(object sender, EventArgs e)

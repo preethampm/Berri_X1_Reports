@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptRepackingItems));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.cmbBrand = new System.Windows.Forms.ComboBox();
-            this.lblBrand = new System.Windows.Forms.Label();
             this.lblDivison = new System.Windows.Forms.Label();
             this.cmbDivision = new System.Windows.Forms.ComboBox();
             this.cmbSubCategory = new System.Windows.Forms.ComboBox();
@@ -55,10 +53,6 @@
             this.btnRemoveBarcode = new System.Windows.Forms.Button();
             this.btnBarcodeLookup = new System.Windows.Forms.Button();
             this.txtBarcodeCode = new System.Windows.Forms.TextBox();
-            this.btnRemoveSupplier = new System.Windows.Forms.Button();
-            this.btnSupplierLookup = new System.Windows.Forms.Button();
-            this.txtSupplier = new System.Windows.Forms.TextBox();
-            this.lblSupplier = new System.Windows.Forms.Label();
             this.lblBarcode = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
@@ -80,8 +74,6 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTop.Controls.Add(this.cmbBrand);
-            this.pnlTop.Controls.Add(this.lblBrand);
             this.pnlTop.Controls.Add(this.lblDivison);
             this.pnlTop.Controls.Add(this.cmbDivision);
             this.pnlTop.Controls.Add(this.cmbSubCategory);
@@ -105,10 +97,6 @@
             this.pnlTop.Controls.Add(this.btnRemoveBarcode);
             this.pnlTop.Controls.Add(this.btnBarcodeLookup);
             this.pnlTop.Controls.Add(this.txtBarcodeCode);
-            this.pnlTop.Controls.Add(this.btnRemoveSupplier);
-            this.pnlTop.Controls.Add(this.btnSupplierLookup);
-            this.pnlTop.Controls.Add(this.txtSupplier);
-            this.pnlTop.Controls.Add(this.lblSupplier);
             this.pnlTop.Controls.Add(this.lblBarcode);
             this.pnlTop.Controls.Add(this.lblTo);
             this.pnlTop.Controls.Add(this.dtpFrom);
@@ -118,36 +106,15 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1284, 168);
+            this.pnlTop.Size = new System.Drawing.Size(1284, 145);
             this.pnlTop.TabIndex = 13;
-            // 
-            // cmbBrand
-            // 
-            this.cmbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBrand.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.Location = new System.Drawing.Point(624, 72);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(264, 25);
-            this.cmbBrand.TabIndex = 211;
-            // 
-            // lblBrand
-            // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblBrand.ForeColor = System.Drawing.Color.Black;
-            this.lblBrand.Location = new System.Drawing.Point(573, 74);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(42, 17);
-            this.lblBrand.TabIndex = 210;
-            this.lblBrand.Text = "Brand";
             // 
             // lblDivison
             // 
             this.lblDivison.AutoSize = true;
             this.lblDivison.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.lblDivison.ForeColor = System.Drawing.Color.Black;
-            this.lblDivison.Location = new System.Drawing.Point(933, 109);
+            this.lblDivison.Location = new System.Drawing.Point(933, 80);
             this.lblDivison.Name = "lblDivison";
             this.lblDivison.Size = new System.Drawing.Size(54, 17);
             this.lblDivison.TabIndex = 208;
@@ -158,7 +125,7 @@
             this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDivision.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDivision.FormattingEnabled = true;
-            this.cmbDivision.Location = new System.Drawing.Point(993, 106);
+            this.cmbDivision.Location = new System.Drawing.Point(993, 77);
             this.cmbDivision.Name = "cmbDivision";
             this.cmbDivision.Size = new System.Drawing.Size(264, 25);
             this.cmbDivision.TabIndex = 209;
@@ -168,7 +135,7 @@
             this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubCategory.FormattingEnabled = true;
-            this.cmbSubCategory.Location = new System.Drawing.Point(993, 134);
+            this.cmbSubCategory.Location = new System.Drawing.Point(993, 105);
             this.cmbSubCategory.Name = "cmbSubCategory";
             this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
             this.cmbSubCategory.TabIndex = 207;
@@ -178,7 +145,7 @@
             this.lblSubCategory.AutoSize = true;
             this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblSubCategory.Location = new System.Drawing.Point(897, 134);
+            this.lblSubCategory.Location = new System.Drawing.Point(897, 105);
             this.lblSubCategory.Name = "lblSubCategory";
             this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
             this.lblSubCategory.TabIndex = 206;
@@ -189,7 +156,7 @@
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(624, 103);
+            this.cmbDepartment.Location = new System.Drawing.Point(624, 74);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(264, 25);
             this.cmbDepartment.TabIndex = 205;
@@ -199,7 +166,7 @@
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(624, 134);
+            this.cmbCategory.Location = new System.Drawing.Point(624, 105);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(264, 25);
             this.cmbCategory.TabIndex = 204;
@@ -209,7 +176,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(554, 137);
+            this.lblCategory.Location = new System.Drawing.Point(554, 108);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(64, 17);
             this.lblCategory.TabIndex = 202;
@@ -220,7 +187,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.lblDepartment.ForeColor = System.Drawing.Color.Black;
-            this.lblDepartment.Location = new System.Drawing.Point(539, 106);
+            this.lblDepartment.Location = new System.Drawing.Point(539, 77);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(81, 17);
             this.lblDepartment.TabIndex = 203;
@@ -234,7 +201,7 @@
             this.btnRemoveItem.FlatAppearance.BorderSize = 0;
             this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveItem.Location = new System.Drawing.Point(900, 9);
+            this.btnRemoveItem.Location = new System.Drawing.Point(900, 39);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(24, 23);
             this.btnRemoveItem.TabIndex = 199;
@@ -250,7 +217,7 @@
             this.btnItemLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItemLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItemLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnItemLookup.Image")));
-            this.btnItemLookup.Location = new System.Drawing.Point(870, 10);
+            this.btnItemLookup.Location = new System.Drawing.Point(870, 40);
             this.btnItemLookup.Name = "btnItemLookup";
             this.btnItemLookup.Size = new System.Drawing.Size(24, 23);
             this.btnItemLookup.TabIndex = 198;
@@ -262,7 +229,7 @@
             // txtItemCode
             // 
             this.txtItemCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.Location = new System.Drawing.Point(624, 10);
+            this.txtItemCode.Location = new System.Drawing.Point(624, 40);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.ReadOnly = true;
             this.txtItemCode.Size = new System.Drawing.Size(239, 22);
@@ -272,7 +239,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(544, 13);
+            this.label1.Location = new System.Drawing.Point(544, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 196;
@@ -286,7 +253,7 @@
             "",
             "Summary",
             "Detailed"});
-            this.cmbReportType.Location = new System.Drawing.Point(131, 126);
+            this.cmbReportType.Location = new System.Drawing.Point(131, 107);
             this.cmbReportType.Name = "cmbReportType";
             this.cmbReportType.Size = new System.Drawing.Size(299, 21);
             this.cmbReportType.TabIndex = 195;
@@ -295,7 +262,7 @@
             // 
             this.lblReportType.AutoSize = true;
             this.lblReportType.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportType.Location = new System.Drawing.Point(49, 127);
+            this.lblReportType.Location = new System.Drawing.Point(49, 108);
             this.lblReportType.Name = "lblReportType";
             this.lblReportType.Size = new System.Drawing.Size(78, 17);
             this.lblReportType.TabIndex = 194;
@@ -304,7 +271,7 @@
             // txtItemName
             // 
             this.txtItemName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(131, 69);
+            this.txtItemName.Location = new System.Drawing.Point(624, 10);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.ReadOnly = true;
             this.txtItemName.Size = new System.Drawing.Size(299, 22);
@@ -314,7 +281,7 @@
             // 
             this.lblItem.AutoSize = true;
             this.lblItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.Location = new System.Drawing.Point(92, 70);
+            this.lblItem.Location = new System.Drawing.Point(585, 11);
             this.lblItem.Name = "lblItem";
             this.lblItem.Size = new System.Drawing.Size(35, 17);
             this.lblItem.TabIndex = 192;
@@ -379,7 +346,7 @@
             this.btnRemoveBarcode.FlatAppearance.BorderSize = 0;
             this.btnRemoveBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveBarcode.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBarcode.Location = new System.Drawing.Point(406, 96);
+            this.btnRemoveBarcode.Location = new System.Drawing.Point(406, 77);
             this.btnRemoveBarcode.Name = "btnRemoveBarcode";
             this.btnRemoveBarcode.Size = new System.Drawing.Size(24, 23);
             this.btnRemoveBarcode.TabIndex = 187;
@@ -395,7 +362,7 @@
             this.btnBarcodeLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarcodeLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBarcodeLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnBarcodeLookup.Image")));
-            this.btnBarcodeLookup.Location = new System.Drawing.Point(376, 97);
+            this.btnBarcodeLookup.Location = new System.Drawing.Point(376, 78);
             this.btnBarcodeLookup.Name = "btnBarcodeLookup";
             this.btnBarcodeLookup.Size = new System.Drawing.Size(24, 23);
             this.btnBarcodeLookup.TabIndex = 186;
@@ -407,69 +374,17 @@
             // txtBarcodeCode
             // 
             this.txtBarcodeCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcodeCode.Location = new System.Drawing.Point(131, 97);
+            this.txtBarcodeCode.Location = new System.Drawing.Point(131, 78);
             this.txtBarcodeCode.Name = "txtBarcodeCode";
             this.txtBarcodeCode.ReadOnly = true;
             this.txtBarcodeCode.Size = new System.Drawing.Size(239, 22);
             this.txtBarcodeCode.TabIndex = 185;
             // 
-            // btnRemoveSupplier
-            // 
-            this.btnRemoveSupplier.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveSupplier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveSupplier.BackgroundImage")));
-            this.btnRemoveSupplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRemoveSupplier.FlatAppearance.BorderSize = 0;
-            this.btnRemoveSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveSupplier.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveSupplier.Location = new System.Drawing.Point(899, 39);
-            this.btnRemoveSupplier.Name = "btnRemoveSupplier";
-            this.btnRemoveSupplier.Size = new System.Drawing.Size(24, 23);
-            this.btnRemoveSupplier.TabIndex = 180;
-            this.btnRemoveSupplier.Tag = "SRCH";
-            this.btnRemoveSupplier.UseVisualStyleBackColor = false;
-            this.btnRemoveSupplier.Click += new System.EventHandler(this.btnRemoveSupplier_Click);
-            // 
-            // btnSupplierLookup
-            // 
-            this.btnSupplierLookup.BackColor = System.Drawing.Color.Transparent;
-            this.btnSupplierLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSupplierLookup.FlatAppearance.BorderSize = 0;
-            this.btnSupplierLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupplierLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupplierLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplierLookup.Image")));
-            this.btnSupplierLookup.Location = new System.Drawing.Point(869, 40);
-            this.btnSupplierLookup.Name = "btnSupplierLookup";
-            this.btnSupplierLookup.Size = new System.Drawing.Size(24, 23);
-            this.btnSupplierLookup.TabIndex = 179;
-            this.btnSupplierLookup.Tag = "SRCH";
-            this.btnSupplierLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnSupplierLookup.UseVisualStyleBackColor = false;
-            this.btnSupplierLookup.Click += new System.EventHandler(this.btnSupplierLookup_Click);
-            // 
-            // txtSupplier
-            // 
-            this.txtSupplier.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplier.Location = new System.Drawing.Point(624, 40);
-            this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.ReadOnly = true;
-            this.txtSupplier.Size = new System.Drawing.Size(239, 22);
-            this.txtSupplier.TabIndex = 178;
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.AutoSize = true;
-            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.Location = new System.Drawing.Point(559, 44);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(56, 17);
-            this.lblSupplier.TabIndex = 177;
-            this.lblSupplier.Text = "Supplier";
-            // 
             // lblBarcode
             // 
             this.lblBarcode.AutoSize = true;
             this.lblBarcode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarcode.Location = new System.Drawing.Point(63, 101);
+            this.lblBarcode.Location = new System.Drawing.Point(63, 82);
             this.lblBarcode.Name = "lblBarcode";
             this.lblBarcode.Size = new System.Drawing.Size(59, 17);
             this.lblBarcode.TabIndex = 176;
@@ -538,9 +453,9 @@
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdData.Location = new System.Drawing.Point(0, 168);
+            this.grdData.Location = new System.Drawing.Point(0, 145);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1284, 643);
+            this.grdData.Size = new System.Drawing.Size(1284, 666);
             this.grdData.TabIndex = 14;
             // 
             // pnlBottom
@@ -639,8 +554,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblBarcode;
-        private System.Windows.Forms.Label lblSupplier;
-        private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Button btnRemoveBranch;
         private System.Windows.Forms.Button btnBrnLookup;
         private System.Windows.Forms.Label lblBranch;
@@ -656,8 +569,6 @@
         private System.Windows.Forms.Button btnItemLookup;
         private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRemoveSupplier;
-        private System.Windows.Forms.Button btnSupplierLookup;
         private System.Windows.Forms.Label lblDivison;
         private System.Windows.Forms.ComboBox cmbDivision;
         private System.Windows.Forms.ComboBox cmbSubCategory;
@@ -666,7 +577,5 @@
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblDepartment;
-        private System.Windows.Forms.ComboBox cmbBrand;
-        private System.Windows.Forms.Label lblBrand;
     }
 }
