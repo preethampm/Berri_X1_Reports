@@ -191,5 +191,36 @@ namespace Berri_X1_Reports.Reports
         {
             txtBarcodeCode.Text = "";
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dtRepacking.Rows.Count <= 0)
+            {
+                MessageBox.Show("No Data. Click View to fetch the data");
+                return;
+            }
+
+            string reportName = "";
+
+            if (cmbReportType.Text == "Summary")
+            {
+                reportName = "CRrptRepackingSummary";
+            }
+            else if (cmbReportType.Text == "Detailed")
+            {
+                reportName = "CRprtRepackingDetailed";
+            }
+            else
+            {
+                MessageBox.Show("Invalid report type selected");
+                return;
+            }
+
+            DataSet dsReport = new DataSet();
+            DataTable dtrpt = dtRepacking.Copy();
+            dsReport.Tables.Add(dtrpt);
+
+            Common_View.Reporintg.PrintReport(dsReport, reportName, 1, true);
+        }
     }
 }

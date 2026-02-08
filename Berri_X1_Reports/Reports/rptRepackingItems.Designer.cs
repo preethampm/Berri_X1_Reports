@@ -394,7 +394,7 @@
             // 
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTo.Location = new System.Drawing.Point(101, 13);
+            this.lblTo.Location = new System.Drawing.Point(296, 12);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(21, 17);
             this.lblTo.TabIndex = 163;
@@ -403,7 +403,7 @@
             // dtpFrom
             // 
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(131, 12);
+            this.dtpFrom.Location = new System.Drawing.Point(131, 10);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(114, 20);
             this.dtpFrom.TabIndex = 161;
@@ -412,17 +412,17 @@
             // dtpTo
             // 
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(323, 13);
+            this.dtpTo.Location = new System.Drawing.Point(323, 9);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(107, 20);
             this.dtpTo.TabIndex = 162;
-            this.dtpTo.Value = new System.DateTime(2026, 1, 15, 0, 0, 0, 0);
+            this.dtpTo.Value = new System.DateTime(2026, 1, 25, 0, 0, 0, 0);
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrom.Location = new System.Drawing.Point(280, 13);
+            this.lblFrom.Location = new System.Drawing.Point(88, 13);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(37, 17);
             this.lblFrom.TabIndex = 164;
@@ -506,6 +506,7 @@
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnView
             // 
