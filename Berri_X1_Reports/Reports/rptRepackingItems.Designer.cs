@@ -447,7 +447,6 @@
             this.grdData.AllowUserToAddRows = false;
             this.grdData.AllowUserToDeleteRows = false;
             this.grdData.AllowUserToResizeColumns = false;
-            this.grdData.AllowUserToResizeRows = false;
             this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdData.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
