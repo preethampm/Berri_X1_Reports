@@ -106,7 +106,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1284, 145);
+            this.pnlTop.Size = new System.Drawing.Size(1295, 145);
             this.pnlTop.TabIndex = 13;
             // 
             // lblDivison
@@ -454,7 +454,7 @@
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdData.Location = new System.Drawing.Point(0, 145);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1284, 666);
+            this.grdData.Size = new System.Drawing.Size(1295, 679);
             this.grdData.TabIndex = 14;
             // 
             // pnlBottom
@@ -464,9 +464,9 @@
             this.pnlBottom.Controls.Add(this.btnPrint);
             this.pnlBottom.Controls.Add(this.btnView);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 766);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 779);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1284, 45);
+            this.pnlBottom.Size = new System.Drawing.Size(1295, 45);
             this.pnlBottom.TabIndex = 15;
             // 
             // btnFilter
@@ -474,7 +474,7 @@
             this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.Location = new System.Drawing.Point(863, 5);
+            this.btnFilter.Location = new System.Drawing.Point(874, 5);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 37);
             this.btnFilter.TabIndex = 5;
@@ -486,7 +486,7 @@
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1181, 5);
+            this.btnClose.Location = new System.Drawing.Point(1192, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 37);
             this.btnClose.TabIndex = 4;
@@ -499,7 +499,7 @@
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(969, 5);
+            this.btnPrint.Location = new System.Drawing.Point(980, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 37);
             this.btnPrint.TabIndex = 3;
@@ -512,7 +512,7 @@
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnView.Location = new System.Drawing.Point(1075, 5);
+            this.btnView.Location = new System.Drawing.Point(1086, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 37);
             this.btnView.TabIndex = 0;
@@ -524,7 +524,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 811);
+            this.ClientSize = new System.Drawing.Size(1295, 824);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
