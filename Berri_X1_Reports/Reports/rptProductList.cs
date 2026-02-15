@@ -1,14 +1,8 @@
 ﻿using Berri_X1_DLL;
 using Berri_X1_UI_Common;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Berri_X1_Reports.Reports
@@ -21,7 +15,6 @@ namespace Berri_X1_Reports.Reports
         }
         DataTable dtProductList = new DataTable();
         DataTable dtBrnids = new DataTable();
-        //string ReportType;
 
         private void Getdata()
         {
@@ -42,24 +35,15 @@ namespace Berri_X1_Reports.Reports
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand("psp_Report_Supplier_Wise_Product_List", sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                //if (rbtnActive.Checked)
-                //    ReportType = "active";
-                //else if (rbtnInactive.Checked)
-                //    ReportType = "inactive";
-                //else
-                //    ReportType = "all";
 
                 SqlParameter[] values =
                 {
                     new SqlParameter("@supplier",  txtSupplier.Text),
                     new SqlParameter("@branchidS", dtBrnids),
-                    new SqlParameter("@brand", cmbBrand.Text),
+                    //new SqlParameter("@brand", cmbBrand.Text),
                     new SqlParameter("@department", cmbDepartment.Text),
                     new SqlParameter("@division", cmbDivision.Text),
                     new SqlParameter("@category", cmbCategory.Text),
-                    //new SqlParameter("@fromdate", dtpFrom.Value),
-                    //new SqlParameter("@toDate", dtpTo.Value),
-                    //new SqlParameter("@reporttype", ReportType)
     
                 };
                 sqlCommand.Parameters.AddRange(values);
@@ -68,6 +52,13 @@ namespace Berri_X1_Reports.Reports
                 sqlDataAdapter.Fill(dtProductList);
 
                 grdData.DataSource = dtProductList;
+                grdData.Columns["BranchName"].Visible = false;
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+                grdData.Columns["Phone1"].Visible = false;
             }
             catch (Exception ex)
             {
