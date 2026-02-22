@@ -47,21 +47,14 @@ namespace Berri_X1_Reports.Reports
                 return;
             }
             int shiftId = 0;
-            //int counterId = 0;
+
             int.TryParse(txtShift.Text.Trim(), out shiftId);
-            //int.TryParse(txtCounter.Text.Trim(), out counterId);
 
             if (!rbtnSummary.Checked && !rbtnDetailed.Checked)
             {
                 MessageBox.Show("Please select either Summary or Detailed report type.");
                 return;
             }
-            //if (cmbCounter.SelectedIndex < 0)
-            //{
-            //    MessageBox.Show("Please select a counter.");
-            //    cmbCounter.Focus();
-            //    return;
-            //}
             string procedureName = "";
             if (rbtnSummary.Checked)
             {

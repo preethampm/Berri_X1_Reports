@@ -66,8 +66,7 @@ namespace Berri_X1_Reports.Reports
             }
             else
             {
-                MessageBox.Show("Unsupported Report Type.");
-
+                MessageBox.Show("Unsupported Report Type."); return;
             }
 
             try
@@ -90,20 +89,6 @@ namespace Berri_X1_Reports.Reports
                 sqlDataAdapter.Fill(dtTax);
 
                 grdData.DataSource = dtTax;
-
-                //string[] hideCols =
-                //{
-                //"ADDRESS1", "PHONE", "CITY", "STATE", "COUNTRY", "PLACE", "DOC TYPE", "DIVISION", "FROM DATE", "TO DATE"
-                //};
-
-                //foreach (string col in hideCols)
-                //{
-                //    if (grdData.Columns.Contains(col))
-                //    {
-                //        grdData.Columns[col].Visible = false;
-                //    }
-                //}
-
             }
             catch (Exception ex)
             {

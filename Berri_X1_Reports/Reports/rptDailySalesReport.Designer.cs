@@ -82,7 +82,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1184, 82);
+            this.pnlTop.Size = new System.Drawing.Size(1242, 82);
             this.pnlTop.TabIndex = 12;
             // 
             // label2
@@ -276,7 +276,7 @@
             this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdData.Location = new System.Drawing.Point(0, 82);
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1184, 679);
+            this.grdData.Size = new System.Drawing.Size(1242, 679);
             this.grdData.TabIndex = 13;
             // 
             // pnlBottom
@@ -288,7 +288,7 @@
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(0, 716);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1184, 45);
+            this.pnlBottom.Size = new System.Drawing.Size(1242, 45);
             this.pnlBottom.TabIndex = 14;
             // 
             // btnFilter
@@ -296,7 +296,7 @@
             this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.Location = new System.Drawing.Point(763, 5);
+            this.btnFilter.Location = new System.Drawing.Point(821, 5);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 37);
             this.btnFilter.TabIndex = 5;
@@ -309,7 +309,7 @@
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1081, 5);
+            this.btnClose.Location = new System.Drawing.Point(1139, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 37);
             this.btnClose.TabIndex = 4;
@@ -322,7 +322,7 @@
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(869, 5);
+            this.btnPrint.Location = new System.Drawing.Point(927, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 37);
             this.btnPrint.TabIndex = 3;
@@ -335,7 +335,7 @@
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnView.Location = new System.Drawing.Point(975, 5);
+            this.btnView.Location = new System.Drawing.Point(1033, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 37);
             this.btnView.TabIndex = 0;
@@ -347,7 +347,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ClientSize = new System.Drawing.Size(1242, 761);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlTop);
