@@ -1,6 +1,7 @@
 ﻿using Berri_X1_DLL;
 using Berri_X1_UI_Common;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,7 +56,7 @@ namespace Berri_X1_Reports.Reports
             }
             else
             {
-                procedureName = "psp_PROMOTION_ITEMS_DETAIL";
+                procedureName = "psp_PROMOTION_ITEMS_DETAILED";
             }
 
                 try
@@ -134,6 +135,39 @@ namespace Berri_X1_Reports.Reports
             branches = branches.Trim();
 
             txtBranches.Text = branches;
+        }
+
+        private void rptPromotionItems_Load(object sender, EventArgs e)
+        {
+            cmbDepartment.DataSource = Masters_PRESENT.GetList("ITEMDEPT", "", true, Common_Var.Company.cmpId);
+            cmbDepartment.DisplayMember = "Description";
+
+            cmbDivision.DataSource = Masters_PRESENT.GetList("ITEMDIVISN", "", true, Common_Var.Company.cmpId);
+            cmbDivision.DisplayMember = "Description";
+
+            cmbCategory.DataSource = Masters_PRESENT.GetList("ITEMCAT", "", true, Common_Var.Company.cmpId);
+            cmbCategory.DisplayMember = "Description";
+
+            cmbSubCategory.DataSource = Masters_PRESENT.GetList("ITEMSUBCAT", "", true, Common_Var.Company.cmpId);
+            cmbSubCategory.DisplayMember = "Description";
+        }
+
+        private void btnItemLookup_Click(object sender, EventArgs e)
+        {
+            ArrayList lkpValues = new ArrayList();
+            lkpValues = Common_View.Methods.ItemMasterLookUp();
+
+            if (lkpValues.Count > 0)
+            {
+                txtItemName.Text = lkpValues[0].ToString(); // Item Name
+                txtItemCode.Text = lkpValues[1].ToString(); // Item Code
+            }
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            txtItemCode.Text = "";
+            txtItemName.Text = "";
         }
     }
 }

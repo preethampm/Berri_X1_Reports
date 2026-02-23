@@ -30,6 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptPromotionItems));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblPromotionType = new System.Windows.Forms.Label();
+            this.cmbPromotionType = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblDivison = new System.Windows.Forms.Label();
+            this.cmbDivision = new System.Windows.Forms.ComboBox();
+            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
+            this.lblSubCategory = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnItemLookup = new System.Windows.Forms.Button();
+            this.txtItemCode = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.lblItem = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.lblTo = new System.Windows.Forms.Label();
@@ -46,23 +63,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
-            this.lblDivison = new System.Windows.Forms.Label();
-            this.cmbDivision = new System.Windows.Forms.ComboBox();
-            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
-            this.lblSubCategory = new System.Windows.Forms.Label();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.lblDepartment = new System.Windows.Forms.Label();
-            this.btnRemoveItem = new System.Windows.Forms.Button();
-            this.btnItemLookup = new System.Windows.Forms.Button();
-            this.txtItemCode = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.lblItem = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblPromotionType = new System.Windows.Forms.Label();
-            this.cmbPromotionType = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -104,6 +104,200 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1367, 158);
             this.pnlTop.TabIndex = 17;
+            // 
+            // lblPromotionType
+            // 
+            this.lblPromotionType.AutoSize = true;
+            this.lblPromotionType.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromotionType.ForeColor = System.Drawing.Color.Black;
+            this.lblPromotionType.Location = new System.Drawing.Point(42, 107);
+            this.lblPromotionType.Name = "lblPromotionType";
+            this.lblPromotionType.Size = new System.Drawing.Size(108, 17);
+            this.lblPromotionType.TabIndex = 226;
+            this.lblPromotionType.Text = "Promotion Type";
+            // 
+            // cmbPromotionType
+            // 
+            this.cmbPromotionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPromotionType.FormattingEnabled = true;
+            this.cmbPromotionType.Items.AddRange(new object[] {
+            "",
+            "OFFER PRICE",
+            "ALL"});
+            this.cmbPromotionType.Location = new System.Drawing.Point(154, 106);
+            this.cmbPromotionType.Name = "cmbPromotionType";
+            this.cmbPromotionType.Size = new System.Drawing.Size(239, 21);
+            this.cmbPromotionType.TabIndex = 225;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(429, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 224;
+            this.button1.Tag = "SRCH";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblDivison
+            // 
+            this.lblDivison.AutoSize = true;
+            this.lblDivison.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblDivison.ForeColor = System.Drawing.Color.Black;
+            this.lblDivison.Location = new System.Drawing.Point(872, 82);
+            this.lblDivison.Name = "lblDivison";
+            this.lblDivison.Size = new System.Drawing.Size(54, 17);
+            this.lblDivison.TabIndex = 222;
+            this.lblDivison.Text = "Division";
+            // 
+            // cmbDivision
+            // 
+            this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDivision.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDivision.FormattingEnabled = true;
+            this.cmbDivision.Location = new System.Drawing.Point(932, 79);
+            this.cmbDivision.Name = "cmbDivision";
+            this.cmbDivision.Size = new System.Drawing.Size(264, 25);
+            this.cmbDivision.TabIndex = 223;
+            // 
+            // cmbSubCategory
+            // 
+            this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSubCategory.FormattingEnabled = true;
+            this.cmbSubCategory.Location = new System.Drawing.Point(932, 107);
+            this.cmbSubCategory.Name = "cmbSubCategory";
+            this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
+            this.cmbSubCategory.TabIndex = 221;
+            // 
+            // lblSubCategory
+            // 
+            this.lblSubCategory.AutoSize = true;
+            this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
+            this.lblSubCategory.Location = new System.Drawing.Point(836, 107);
+            this.lblSubCategory.Name = "lblSubCategory";
+            this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
+            this.lblSubCategory.TabIndex = 220;
+            this.lblSubCategory.Text = "Sub-Category";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(563, 76);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(264, 25);
+            this.cmbDepartment.TabIndex = 219;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(563, 107);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(264, 25);
+            this.cmbCategory.TabIndex = 218;
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblCategory.ForeColor = System.Drawing.Color.Black;
+            this.lblCategory.Location = new System.Drawing.Point(493, 110);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(64, 17);
+            this.lblCategory.TabIndex = 216;
+            this.lblCategory.Text = "Category";
+            // 
+            // lblDepartment
+            // 
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.lblDepartment.ForeColor = System.Drawing.Color.Black;
+            this.lblDepartment.Location = new System.Drawing.Point(478, 79);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(81, 17);
+            this.lblDepartment.TabIndex = 217;
+            this.lblDepartment.Text = "Department";
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveItem.BackgroundImage")));
+            this.btnRemoveItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveItem.Location = new System.Drawing.Point(839, 41);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(24, 23);
+            this.btnRemoveItem.TabIndex = 215;
+            this.btnRemoveItem.Tag = "SRCH";
+            this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // btnItemLookup
+            // 
+            this.btnItemLookup.BackColor = System.Drawing.Color.Transparent;
+            this.btnItemLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnItemLookup.FlatAppearance.BorderSize = 0;
+            this.btnItemLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItemLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnItemLookup.Image")));
+            this.btnItemLookup.Location = new System.Drawing.Point(809, 42);
+            this.btnItemLookup.Name = "btnItemLookup";
+            this.btnItemLookup.Size = new System.Drawing.Size(24, 23);
+            this.btnItemLookup.TabIndex = 214;
+            this.btnItemLookup.Tag = "SRCH";
+            this.btnItemLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnItemLookup.UseVisualStyleBackColor = false;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemCode.Location = new System.Drawing.Point(563, 42);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.ReadOnly = true;
+            this.txtItemCode.Size = new System.Drawing.Size(239, 22);
+            this.txtItemCode.TabIndex = 213;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(483, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 212;
+            this.label2.Text = "Item Code";
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemName.Location = new System.Drawing.Point(563, 12);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.ReadOnly = true;
+            this.txtItemName.Size = new System.Drawing.Size(299, 22);
+            this.txtItemName.TabIndex = 211;
+            // 
+            // lblItem
+            // 
+            this.lblItem.AutoSize = true;
+            this.lblItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItem.Location = new System.Drawing.Point(524, 13);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(35, 17);
+            this.lblItem.TabIndex = 210;
+            this.lblItem.Text = "Item";
             // 
             // label1
             // 
@@ -291,198 +485,6 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // lblDivison
-            // 
-            this.lblDivison.AutoSize = true;
-            this.lblDivison.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblDivison.ForeColor = System.Drawing.Color.Black;
-            this.lblDivison.Location = new System.Drawing.Point(872, 82);
-            this.lblDivison.Name = "lblDivison";
-            this.lblDivison.Size = new System.Drawing.Size(54, 17);
-            this.lblDivison.TabIndex = 222;
-            this.lblDivison.Text = "Division";
-            // 
-            // cmbDivision
-            // 
-            this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDivision.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDivision.FormattingEnabled = true;
-            this.cmbDivision.Location = new System.Drawing.Point(932, 79);
-            this.cmbDivision.Name = "cmbDivision";
-            this.cmbDivision.Size = new System.Drawing.Size(264, 25);
-            this.cmbDivision.TabIndex = 223;
-            // 
-            // cmbSubCategory
-            // 
-            this.cmbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSubCategory.FormattingEnabled = true;
-            this.cmbSubCategory.Location = new System.Drawing.Point(932, 107);
-            this.cmbSubCategory.Name = "cmbSubCategory";
-            this.cmbSubCategory.Size = new System.Drawing.Size(264, 25);
-            this.cmbSubCategory.TabIndex = 221;
-            // 
-            // lblSubCategory
-            // 
-            this.lblSubCategory.AutoSize = true;
-            this.lblSubCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblSubCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblSubCategory.Location = new System.Drawing.Point(836, 107);
-            this.lblSubCategory.Name = "lblSubCategory";
-            this.lblSubCategory.Size = new System.Drawing.Size(90, 17);
-            this.lblSubCategory.TabIndex = 220;
-            this.lblSubCategory.Text = "Sub-Category";
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDepartment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(563, 76);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(264, 25);
-            this.cmbDepartment.TabIndex = 219;
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(563, 107);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(264, 25);
-            this.cmbCategory.TabIndex = 218;
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(493, 110);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(64, 17);
-            this.lblCategory.TabIndex = 216;
-            this.lblCategory.Text = "Category";
-            // 
-            // lblDepartment
-            // 
-            this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.lblDepartment.ForeColor = System.Drawing.Color.Black;
-            this.lblDepartment.Location = new System.Drawing.Point(478, 79);
-            this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(81, 17);
-            this.lblDepartment.TabIndex = 217;
-            this.lblDepartment.Text = "Department";
-            // 
-            // btnRemoveItem
-            // 
-            this.btnRemoveItem.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveItem.BackgroundImage")));
-            this.btnRemoveItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
-            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveItem.Location = new System.Drawing.Point(839, 41);
-            this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(24, 23);
-            this.btnRemoveItem.TabIndex = 215;
-            this.btnRemoveItem.Tag = "SRCH";
-            this.btnRemoveItem.UseVisualStyleBackColor = false;
-            // 
-            // btnItemLookup
-            // 
-            this.btnItemLookup.BackColor = System.Drawing.Color.Transparent;
-            this.btnItemLookup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnItemLookup.FlatAppearance.BorderSize = 0;
-            this.btnItemLookup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnItemLookup.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItemLookup.Image = ((System.Drawing.Image)(resources.GetObject("btnItemLookup.Image")));
-            this.btnItemLookup.Location = new System.Drawing.Point(809, 42);
-            this.btnItemLookup.Name = "btnItemLookup";
-            this.btnItemLookup.Size = new System.Drawing.Size(24, 23);
-            this.btnItemLookup.TabIndex = 214;
-            this.btnItemLookup.Tag = "SRCH";
-            this.btnItemLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnItemLookup.UseVisualStyleBackColor = false;
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.Location = new System.Drawing.Point(563, 42);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.ReadOnly = true;
-            this.txtItemCode.Size = new System.Drawing.Size(239, 22);
-            this.txtItemCode.TabIndex = 213;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(483, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 212;
-            this.label2.Text = "Item Code";
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(563, 12);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.ReadOnly = true;
-            this.txtItemName.Size = new System.Drawing.Size(299, 22);
-            this.txtItemName.TabIndex = 211;
-            // 
-            // lblItem
-            // 
-            this.lblItem.AutoSize = true;
-            this.lblItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.Location = new System.Drawing.Point(524, 13);
-            this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(35, 17);
-            this.lblItem.TabIndex = 210;
-            this.lblItem.Text = "Item";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(429, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 224;
-            this.button1.Tag = "SRCH";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lblPromotionType
-            // 
-            this.lblPromotionType.AutoSize = true;
-            this.lblPromotionType.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromotionType.ForeColor = System.Drawing.Color.Black;
-            this.lblPromotionType.Location = new System.Drawing.Point(42, 107);
-            this.lblPromotionType.Name = "lblPromotionType";
-            this.lblPromotionType.Size = new System.Drawing.Size(108, 17);
-            this.lblPromotionType.TabIndex = 226;
-            this.lblPromotionType.Text = "Promotion Type";
-            // 
-            // cmbPromotionType
-            // 
-            this.cmbPromotionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPromotionType.FormattingEnabled = true;
-            this.cmbPromotionType.Items.AddRange(new object[] {
-            "",
-            "OFFER PRICE",
-            "ALL"});
-            this.cmbPromotionType.Location = new System.Drawing.Point(154, 106);
-            this.cmbPromotionType.Name = "cmbPromotionType";
-            this.cmbPromotionType.Size = new System.Drawing.Size(239, 21);
-            this.cmbPromotionType.TabIndex = 225;
-            // 
             // rptPromotionItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +495,7 @@
             this.Controls.Add(this.pnlTop);
             this.Name = "rptPromotionItems";
             this.Text = "Promotion Items";
+            this.Load += new System.EventHandler(this.rptPromotionItems_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
