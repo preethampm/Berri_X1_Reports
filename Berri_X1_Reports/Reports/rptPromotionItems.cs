@@ -2,14 +2,8 @@
 using Berri_X1_UI_Common;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Berri_X1_Reports.Reports
@@ -54,9 +48,18 @@ namespace Berri_X1_Reports.Reports
             {
                 procedureName = "psp_PROMOTION_ITEMS_SUMMARY";
             }
-            else
+            else if(cmbReportType.Text == "Detailed")
             {
                 procedureName = "psp_PROMOTION_ITEMS_DETAILED";
+            }
+            else if (cmbReportType.Text == "Promotion Summary") 
+            {   
+                procedureName = "psp_PROMOTION_ITEMS_PROMOTION_SUMMARY";
+            }
+            else
+            {
+                MessageBox.Show("Invalid report type selected");
+                return;
             }
 
                 try
@@ -67,10 +70,10 @@ namespace Berri_X1_Reports.Reports
                     sqlCommand.CommandType = CommandType.StoredProcedure;
                     SqlParameter[] values =
                     {
-                new SqlParameter("@branchids", dtBrnids),
-                new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                new SqlParameter("@todate", dtpTo.Value.Date)
-            };
+                        new SqlParameter("@branchids", dtBrnids),
+                        new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                        new SqlParameter("@todate", dtpTo.Value.Date)
+                    };
                     sqlCommand.Parameters.AddRange(values);
 
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -78,16 +81,16 @@ namespace Berri_X1_Reports.Reports
 
                     grdData.DataSource = dtPromotion;
 
-                    //grdData.Columns["Address1"].Visible = false;
-                    //grdData.Columns["Place"].Visible = false;
-                    //grdData.Columns["Phone1"].Visible = false;
-                    //grdData.Columns["Country"].Visible = false;
-                    //grdData.Columns["State"].Visible = false;
-                    //grdData.Columns["City"].Visible = false;
-                    //grdData.Columns["From Date"].Visible = false;
-                    //grdData.Columns["To Date"].Visible = false;
-                    //grdData.Columns["Email"].Visible = false;
-                    //grdData.Columns["Website"].Visible = false;
+                    grdData.Columns["Address1"].Visible = false;
+                    grdData.Columns["Place"].Visible = false;
+                    grdData.Columns["Phone1"].Visible = false;
+                    grdData.Columns["Country"].Visible = false;
+                    grdData.Columns["State"].Visible = false;
+                    grdData.Columns["City"].Visible = false;
+                    grdData.Columns["From Date"].Visible = false;
+                    grdData.Columns["To Date"].Visible = false;
+                    grdData.Columns["Branch"].Visible = false;
+
                 }
                 catch (Exception ex)
                 {
@@ -168,6 +171,37 @@ namespace Berri_X1_Reports.Reports
         {
             txtItemCode.Text = "";
             txtItemName.Text = "";
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dtPromotion.Rows.Count <= 0)
+            {
+                MessageBox.Show("No Data. Click View to fetch the data");
+                return;
+            }
+
+            string reportName = "";
+
+            if (cmbReportType.Text == "Summary")
+            {
+                reportName = "CRrptPromotionSummary";
+            }
+            else if (cmbReportType.Text == "Detailed")
+            {
+                reportName = "CRprtRepackingDetailed";
+            }
+            else
+            {
+                MessageBox.Show("Invalid report type selected");
+                return;
+            }
+
+            DataSet dsReport = new DataSet();
+            DataTable dtrpt = dtPromotion.Copy();
+            dsReport.Tables.Add(dtrpt);
+
+            Common_View.Reporintg.PrintReport(dsReport, reportName, 1, true);
         }
     }
 }
