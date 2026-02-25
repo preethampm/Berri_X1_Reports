@@ -15,13 +15,13 @@ namespace Berri_X1_Reports.Reports
             InitializeComponent();
         }
 
-        DataTable dtPromotion = new DataTable();
+        DataTable dtPromotionItems = new DataTable();
         DataTable dtBrnids = new DataTable();
 
         private void GetData()
         {
             grdData.DataSource = null;
-            dtPromotion = new DataTable();
+            dtPromotionItems = new DataTable();
             if (dtBrnids.Rows.Count <= 0)
             {
                 MessageBox.Show("Please Select Atleast One Branch");
@@ -62,40 +62,40 @@ namespace Berri_X1_Reports.Reports
                 return;
             }
 
-                try
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand(procedureName, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                SqlParameter[] values =
                 {
-                    SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
-                    sqlConnection.Open();
-                    SqlCommand sqlCommand = new SqlCommand(procedureName, sqlConnection);
-                    sqlCommand.CommandType = CommandType.StoredProcedure;
-                    SqlParameter[] values =
-                    {
-                        new SqlParameter("@branchids", dtBrnids),
-                        new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                        new SqlParameter("@todate", dtpTo.Value.Date)
-                    };
-                    sqlCommand.Parameters.AddRange(values);
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                    new SqlParameter("@todate", dtpTo.Value.Date)
+                };
+                sqlCommand.Parameters.AddRange(values);
 
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-                    sqlDataAdapter.Fill(dtPromotion);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dtPromotionItems);
 
-                    grdData.DataSource = dtPromotion;
+                grdData.DataSource = dtPromotionItems;
 
-                    grdData.Columns["Address1"].Visible = false;
-                    grdData.Columns["Place"].Visible = false;
-                    grdData.Columns["Phone1"].Visible = false;
-                    grdData.Columns["Country"].Visible = false;
-                    grdData.Columns["State"].Visible = false;
-                    grdData.Columns["City"].Visible = false;
-                    grdData.Columns["From Date"].Visible = false;
-                    grdData.Columns["To Date"].Visible = false;
-                    grdData.Columns["Branch"].Visible = false;
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["Place"].Visible = false;
+                grdData.Columns["Phone1"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["From Date"].Visible = false;
+                grdData.Columns["To Date"].Visible = false;
+                grdData.Columns["Branch"].Visible = false;
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace Berri_X1_Reports.Reports
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (dtPromotion.Rows.Count <= 0)
+            if (dtPromotionItems.Rows.Count <= 0)
             {
                 MessageBox.Show("No Data. Click View to fetch the data");
                 return;
@@ -198,7 +198,7 @@ namespace Berri_X1_Reports.Reports
             }
 
             DataSet dsReport = new DataSet();
-            DataTable dtrpt = dtPromotion.Copy();
+            DataTable dtrpt = dtPromotionItems.Copy();
             dsReport.Tables.Add(dtrpt);
 
             Common_View.Reporintg.PrintReport(dsReport, reportName, 1, true);

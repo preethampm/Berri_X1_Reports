@@ -291,5 +291,14 @@ namespace Berri_X1_Reports
             rptPromotionItems.StartPosition = FormStartPosition.CenterParent;
             rptPromotionItems.Show();
         }
+
+        private void promotionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptPromotionDetails rptPromotionDetails = new rptPromotionDetails();
+            rptPromotionDetails.MdiParent = this;
+            rptPromotionDetails.StartPosition = FormStartPosition.CenterParent;
+            rptPromotionDetails.Show();
+
+        }
     }
 }

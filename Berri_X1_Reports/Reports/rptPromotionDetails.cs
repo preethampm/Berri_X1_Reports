@@ -1,0 +1,106 @@
+﻿using Berri_X1_DLL;
+using Berri_X1_UI_Common;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Berri_X1_Reports.Reports
+{
+    public partial class rptPromotionDetails : Form
+    {
+        public rptPromotionDetails()
+        {
+            InitializeComponent();
+        }
+        DataTable dtPromotion = new DataTable();
+        DataTable dtBrnids = new DataTable();
+
+        private void GetData()
+        {
+            grdData.DataSource = null;
+            dtPromotion = new DataTable();
+            if (dtBrnids.Rows.Count <= 0)
+            {
+                MessageBox.Show("Please Select Atleast One Branch");
+                btnBrnLookup_Click(null, null);
+                return;
+            }
+            if (dtpFrom.Value.Date > dtpTo.Value.Date)
+            {
+                MessageBox.Show("From Date cannot be greater than To Date.");
+                dtpFrom.Focus();
+                return;
+            }
+            DateTime today = DateTime.Today;
+            if (dtpFrom.Value.Date == today && dtpTo.Value.Date == today)
+            {
+                MessageBox.Show("Please change the date range. No data available for today.");
+                dtpFrom.Focus();
+                return;
+            }
+
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("psp_PROMOTION_DETAILS", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                SqlParameter[] values =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate", dtpFrom.Value.Date),
+                    new SqlParameter("@todate", dtpTo.Value.Date)
+                };
+                sqlCommand.Parameters.AddRange(values);
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dtPromotion);
+
+                grdData.DataSource = dtPromotion;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void btnBrnLookup_Click(object sender, EventArgs e)
+        {
+            frmLookUp_Branch _objBranch = new frmLookUp_Branch(dtBrnids);
+            _objBranch.ShowDialog();
+
+            if (!_objBranch.isEnter)
+            {
+                return;
+            }
+
+            dtBrnids = _objBranch.dtBranches;
+
+            string branches = "";
+
+            for (int i = 0; i < dtBrnids.Rows.Count; i++)
+            {
+                branches += ", " + dtBrnids.Rows[i]["BrnName"];
+            }
+
+            branches = branches.TrimStart(',');
+            branches = branches.Trim();
+
+            txtBranches.Text = branches;
+        }
+    }
+}

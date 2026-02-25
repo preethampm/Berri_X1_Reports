@@ -49,11 +49,12 @@
             this.invoiceWiseToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.itemWiseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.repackingItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.packingItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purhaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseDepartmentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.packingItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.promotionDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +98,8 @@
             this.cancelledItemsReportToolStripMenuItem,
             this.TRToolStripMenuItem,
             this.repackingItemsToolStripMenuItem,
-            this.packingItemsToolStripMenuItem});
+            this.packingItemsToolStripMenuItem,
+            this.promotionDetailsToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
@@ -217,6 +219,13 @@
             this.repackingItemsToolStripMenuItem.Text = "Repacking Items";
             this.repackingItemsToolStripMenuItem.Click += new System.EventHandler(this.repackingItemsToolStripMenuItem_Click);
             // 
+            // packingItemsToolStripMenuItem
+            // 
+            this.packingItemsToolStripMenuItem.Name = "packingItemsToolStripMenuItem";
+            this.packingItemsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.packingItemsToolStripMenuItem.Text = "Promotion Items";
+            this.packingItemsToolStripMenuItem.Click += new System.EventHandler(this.packingItemsToolStripMenuItem_Click);
+            // 
             // purhaseToolStripMenuItem
             // 
             this.purhaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -244,12 +253,12 @@
             this.mISToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.mISToolStripMenuItem.Text = "MIS";
             // 
-            // packingItemsToolStripMenuItem
+            // promotionDetailsToolStripMenuItem
             // 
-            this.packingItemsToolStripMenuItem.Name = "packingItemsToolStripMenuItem";
-            this.packingItemsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.packingItemsToolStripMenuItem.Text = "Promotion Items";
-            this.packingItemsToolStripMenuItem.Click += new System.EventHandler(this.packingItemsToolStripMenuItem_Click);
+            this.promotionDetailsToolStripMenuItem.Name = "promotionDetailsToolStripMenuItem";
+            this.promotionDetailsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.promotionDetailsToolStripMenuItem.Text = "Promotion Details";
+            this.promotionDetailsToolStripMenuItem.Click += new System.EventHandler(this.promotionDetailsToolStripMenuItem_Click);
             // 
             // MainFrom
             // 
@@ -299,6 +308,7 @@
         private System.Windows.Forms.ToolStripMenuItem itemWiseToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem repackingItemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packingItemsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem promotionDetailsToolStripMenuItem;
     }
 }
 
