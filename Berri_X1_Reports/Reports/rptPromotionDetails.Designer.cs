@@ -110,6 +110,7 @@
             this.btnRemoveItem.TabIndex = 215;
             this.btnRemoveItem.Tag = "SRCH";
             this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnItemLookup
             // 
@@ -126,6 +127,7 @@
             this.btnItemLookup.Tag = "SRCH";
             this.btnItemLookup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnItemLookup.UseVisualStyleBackColor = false;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
             // 
             // txtItemCode
             // 

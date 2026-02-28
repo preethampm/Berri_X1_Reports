@@ -1,6 +1,7 @@
 ﻿using Berri_X1_DLL;
 using Berri_X1_UI_Common;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -101,6 +102,24 @@ namespace Berri_X1_Reports.Reports
             branches = branches.Trim();
 
             txtBranches.Text = branches;
+        }
+
+        private void btnItemLookup_Click(object sender, EventArgs e)
+        {
+            ArrayList lkpValues = new ArrayList();
+            lkpValues = Common_View.Methods.ItemMasterLookUp();
+
+            if (lkpValues.Count > 0)
+            {
+                txtItemName.Text = lkpValues[0].ToString(); // Item Name
+                txtItemCode.Text = lkpValues[1].ToString(); // Item Code
+            }
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            txtItemCode.Text = "";
+            txtItemName.Text = "";
         }
     }
 }
