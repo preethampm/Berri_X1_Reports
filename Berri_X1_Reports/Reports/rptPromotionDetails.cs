@@ -66,6 +66,14 @@ namespace Berri_X1_Reports.Reports
 
                 grdData.DataSource = dtPromotion;
 
+                grdData.Columns["Address1"].Visible = false;
+                grdData.Columns["Country"].Visible = false;
+                grdData.Columns["State"].Visible = false;
+                grdData.Columns["City"].Visible = false;
+                grdData.Columns["From Date"].Visible = false;
+                grdData.Columns["To Date"].Visible = false;
+                grdData.Columns["Branch"].Visible = false;
+
             }
             catch (Exception ex)
             {
@@ -120,6 +128,35 @@ namespace Berri_X1_Reports.Reports
         {
             txtItemCode.Text = "";
             txtItemName.Text = "";
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dtPromotion.Rows.Count <= 0)
+            {
+                MessageBox.Show("No Data. Click View to fetch the data");
+                return;
+            }
+
+            DataSet dsReport = new DataSet();
+            dsReport.Tables.Clear();
+            DataTable dtrpt = dtPromotion.Copy();
+
+            dsReport.Tables.Add(dtrpt);
+
+            Common_View.Reporintg.PrintReport(dsReport, "CRrptPromotionDetails", 1, true);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            pnlTop.Visible = !pnlTop.Visible;
+            btnFilter.Text = pnlTop.Visible ? "Hide Filter" : "Show Filter";
         }
     }
 }
