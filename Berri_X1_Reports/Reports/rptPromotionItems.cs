@@ -54,7 +54,7 @@ namespace Berri_X1_Reports.Reports
             }
             else if (cmbReportType.Text == "Promotion Summary") 
             {   
-                procedureName = "psp_PROMOTION_ITEMS_PROMOTION_SUMMARY";
+                procedureName = "psp_PROMOTION_DETAILS";
             }
             else
             {

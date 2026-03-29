@@ -300,5 +300,14 @@ namespace Berri_X1_Reports
             rptPromotionDetails.Show();
 
         }
+
+        private void summaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptBranchSummary rptBranchSummary = new rptBranchSummary();
+            rptBranchSummary.MdiParent = this;
+            rptBranchSummary.StartPosition = FormStartPosition.CenterParent;
+            rptBranchSummary.Show();
+
+        }
     }
 }
