@@ -199,19 +199,41 @@ namespace Berri_X1_Reports.Reports
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            //if (dtCancelled.Rows.Count <= 0)
-            //{
-            //    MessageBox.Show("No Data");
-            //    return;
-            //}
+            
+            if (dtScalars.Rows.Count <= 0)
+            {
+                MessageBox.Show("No Data");
+                return;
+            }
 
-            //DataSet dsReport = new DataSet();
-            //dsReport.Tables.Clear();
-            //DataTable dtrpt = dtCancelled.Copy();
-            //dtrpt.TableName = "dtPeriodic";
-            //dsReport.Tables.Add(dtrpt);
+            DataSet dsReport = new DataSet();
+            dsReport.Tables.Clear();
 
-            //Common_View.Reporintg.PrintReport(dsReport, "CRrptCancelledItemsReport", 1, true);
+            DataTable dt1 = dtScalars.Copy();
+            dt1.TableName = "dtScalars";
+            dsReport.Tables.Add(dt1);
+
+            DataTable dt2 = dtPaymentMode.Copy();
+            dt2.TableName = "dtPaymentMode";
+            dsReport.Tables.Add(dt2);
+
+            DataTable dt3 = dtDailyTrend.Copy();
+            dt3.TableName = "dtDailyTrend";
+            dsReport.Tables.Add(dt3);
+
+            DataTable dt4 = dtCategory.Copy();
+            dt4.TableName = "dtCategory";
+            dsReport.Tables.Add(dt4);
+
+            DataTable dt5 = dtTop10.Copy();
+            dt5.TableName = "dtTop10";
+            dsReport.Tables.Add(dt5);
+
+            DataTable dt6 = dtReturns.Copy();
+            dt6.TableName = "dtReturns";
+            dsReport.Tables.Add(dt6);
+
+            Common_View.Reporintg.PrintReport(dsReport, "CRrptBranchSummary", 1, true);
         }
     }
 }
