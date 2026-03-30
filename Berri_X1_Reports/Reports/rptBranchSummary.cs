@@ -16,11 +16,24 @@ namespace Berri_X1_Reports.Reports
 
         DataTable dtScalars = new DataTable();
         DataTable dtBrnids = new DataTable();
+        DataTable dtPaymentMode = new DataTable();
+        DataTable dtDailyTrend = new DataTable();
+        DataTable dtCategory = new DataTable();
+        DataTable dtTop10 = new DataTable();
+        DataTable dtReturns = new DataTable();
+        DataTable dtVAT = new DataTable();
 
         private void GetData()
         {
             grdData.DataSource = null;
             dtScalars = new DataTable();
+            dtPaymentMode = new DataTable();
+            dtDailyTrend = new DataTable();
+            dtCategory = new DataTable();
+            dtTop10 = new DataTable();
+            dtReturns = new DataTable();
+            //dtVAT = new DataTable();
+
             if (dtBrnids.Rows.Count <= 0)
             {
                 MessageBox.Show("Please Select Atleast One Branch");
@@ -45,21 +58,95 @@ namespace Berri_X1_Reports.Reports
             {
                 SqlConnection sqlConnection = new SqlConnection(Common_Connection.ConnString_Cloud);
                 sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand("psp_BRANCH_SUMMARY_SCALARS", sqlConnection);
-                sqlCommand.CommandType = CommandType.StoredProcedure;
+
                 SqlParameter[] values =
                 {
-                new SqlParameter("@branchids", dtBrnids),
-                new SqlParameter("@fromdate", dtpFrom.Value.Date),
-                new SqlParameter("@todate", dtpTo.Value.Date)
-            };
-                sqlCommand.Parameters.AddRange(values);
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                // SP1 - Scalars
+                SqlCommand cmd1 = new SqlCommand("psp_BRANCH_SUMMARY_SCALARS", sqlConnection);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.AddRange(values);
+                new SqlDataAdapter(cmd1).Fill(dtScalars);
 
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-                sqlDataAdapter.Fill(dtScalars);
+                // SP2 - Payment Mode
+                SqlParameter[] values2 =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                SqlCommand cmd2 = new SqlCommand("psp_BRANCH_SUMMARY_PAYMENTMODE", sqlConnection);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddRange(values2);
+                new SqlDataAdapter(cmd2).Fill(dtPaymentMode);
 
+                // SP3 - Daily Trend
+                SqlParameter[] values3 =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                SqlCommand cmd3 = new SqlCommand("psp_BRANCH_SUMMARY_DAILYTREND", sqlConnection);
+                cmd3.CommandType = CommandType.StoredProcedure;
+                cmd3.Parameters.AddRange(values3);
+                new SqlDataAdapter(cmd3).Fill(dtDailyTrend);
+
+                // SP4 - Category Sales
+                SqlParameter[] values4 =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                SqlCommand cmd4 = new SqlCommand("psp_BRANCH_SUMMARY_CATEGORYSALES", sqlConnection);
+                cmd4.CommandType = CommandType.StoredProcedure;
+                cmd4.Parameters.AddRange(values4);
+                new SqlDataAdapter(cmd4).Fill(dtCategory);
+
+                // SP5 - Top 10 Items
+                SqlParameter[] values5 =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                SqlCommand cmd5 = new SqlCommand("psp_BRANCH_SUMMARY_TOP10ITEMS", sqlConnection);
+                cmd5.CommandType = CommandType.StoredProcedure;
+                cmd5.Parameters.AddRange(values5);
+                new SqlDataAdapter(cmd5).Fill(dtTop10);
+
+                // SP6 - Returns
+                SqlParameter[] values6 =
+                {
+                    new SqlParameter("@branchids", dtBrnids),
+                    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                    new SqlParameter("@todate",    dtpTo.Value.Date)
+                };
+                SqlCommand cmd6 = new SqlCommand("psp_BRANCH_SUMMARY_RETURNS", sqlConnection);
+                cmd6.CommandType = CommandType.StoredProcedure;
+                cmd6.Parameters.AddRange(values6);
+                new SqlDataAdapter(cmd6).Fill(dtReturns);
+
+                // SP7 - VAT
+                //SqlParameter[] values7 =
+                //{
+                //    new SqlParameter("@branchids", dtBrnids),
+                //    new SqlParameter("@fromdate",  dtpFrom.Value.Date),
+                //    new SqlParameter("@todate",    dtpTo.Value.Date)
+                //};
+                //SqlCommand cmd7 = new SqlCommand("psp_BRANCH_SUMMARY_VAT", sqlConnection);
+                //cmd7.CommandType = CommandType.StoredProcedure;
+                //cmd7.Parameters.AddRange(values7);
+                //new SqlDataAdapter(cmd7).Fill(dtVAT);
+
+                sqlConnection.Close();
+
+                // show scalars for now, swap later for Crystal Reports
                 grdData.DataSource = dtScalars;
-
             }
             catch (Exception ex)
             {
@@ -67,22 +154,6 @@ namespace Berri_X1_Reports.Reports
             }
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
-        }
-
-        private void btnFilter_Click(object sender, EventArgs e)
-        {
-            pnlTop.Visible = !pnlTop.Visible;
-            btnFilter.Text = pnlTop.Visible ? "Hide Filter" : "Show Filter";
-        }
 
         private void btnBrnLookup_Click(object sender, EventArgs e)
         {
@@ -107,6 +178,40 @@ namespace Berri_X1_Reports.Reports
             branches = branches.Trim();
 
             txtBranches.Text = branches;
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            pnlTop.Visible = !pnlTop.Visible;
+            btnFilter.Text = pnlTop.Visible ? "Hide Filter" : "Show Filter";
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you Sure to Close?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //if (dtCancelled.Rows.Count <= 0)
+            //{
+            //    MessageBox.Show("No Data");
+            //    return;
+            //}
+
+            //DataSet dsReport = new DataSet();
+            //dsReport.Tables.Clear();
+            //DataTable dtrpt = dtCancelled.Copy();
+            //dtrpt.TableName = "dtPeriodic";
+            //dsReport.Tables.Add(dtrpt);
+
+            //Common_View.Reporintg.PrintReport(dsReport, "CRrptCancelledItemsReport", 1, true);
         }
     }
 }

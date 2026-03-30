@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptBranchSummary));
-            this.pnlBottom = new System.Windows.Forms.Panel();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.grdData = new System.Windows.Forms.DataGridView();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
@@ -45,89 +39,16 @@
             this.lblBranch = new System.Windows.Forms.Label();
             this.txtBranches = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pnlBottom = new System.Windows.Forms.Panel();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
+            this.grdData = new System.Windows.Forms.DataGridView();
+            this.pnlTop.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
-            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlBottom
-            // 
-            this.pnlBottom.Controls.Add(this.btnFilter);
-            this.pnlBottom.Controls.Add(this.btnClose);
-            this.pnlBottom.Controls.Add(this.btnPrint);
-            this.pnlBottom.Controls.Add(this.btnView);
-            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 382);
-            this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(823, 45);
-            this.pnlBottom.TabIndex = 17;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.Location = new System.Drawing.Point(402, 5);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(100, 37);
-            this.btnFilter.TabIndex = 5;
-            this.btnFilter.Text = "Hide Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(720, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 37);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(508, 5);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 37);
-            this.btnPrint.TabIndex = 3;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
-            // btnView
-            // 
-            this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnView.Location = new System.Drawing.Point(614, 5);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(100, 37);
-            this.btnView.TabIndex = 0;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // grdData
-            // 
-            this.grdData.AllowUserToAddRows = false;
-            this.grdData.AllowUserToDeleteRows = false;
-            this.grdData.AllowUserToOrderColumns = true;
-            this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grdData.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdData.Location = new System.Drawing.Point(0, 0);
-            this.grdData.Name = "grdData";
-            this.grdData.ReadOnly = true;
-            this.grdData.Size = new System.Drawing.Size(823, 382);
-            this.grdData.TabIndex = 18;
             // 
             // pnlTop
             // 
@@ -146,8 +67,8 @@
             this.pnlTop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(823, 47);
-            this.pnlTop.TabIndex = 19;
+            this.pnlTop.Size = new System.Drawing.Size(1027, 47);
+            this.pnlTop.TabIndex = 15;
             // 
             // lblTo
             // 
@@ -253,31 +174,106 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Visible = false;
             // 
+            // pnlBottom
+            // 
+            this.pnlBottom.Controls.Add(this.btnFilter);
+            this.pnlBottom.Controls.Add(this.btnClose);
+            this.pnlBottom.Controls.Add(this.btnPrint);
+            this.pnlBottom.Controls.Add(this.btnView);
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 446);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(1027, 45);
+            this.pnlBottom.TabIndex = 17;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnFilter.Location = new System.Drawing.Point(606, 5);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(100, 37);
+            this.btnFilter.TabIndex = 5;
+            this.btnFilter.Text = "Hide Filter";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(924, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 37);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.Location = new System.Drawing.Point(712, 5);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 37);
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnView
+            // 
+            this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnView.Location = new System.Drawing.Point(818, 5);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(100, 37);
+            this.btnView.TabIndex = 0;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // grdData
+            // 
+            this.grdData.AllowUserToAddRows = false;
+            this.grdData.AllowUserToDeleteRows = false;
+            this.grdData.AllowUserToOrderColumns = true;
+            this.grdData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grdData.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.grdData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdData.Location = new System.Drawing.Point(0, 47);
+            this.grdData.Name = "grdData";
+            this.grdData.ReadOnly = true;
+            this.grdData.Size = new System.Drawing.Size(1027, 399);
+            this.grdData.TabIndex = 18;
+            // 
             // rptBranchSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 427);
-            this.Controls.Add(this.pnlTop);
+            this.ClientSize = new System.Drawing.Size(1027, 491);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.pnlBottom);
+            this.Controls.Add(this.pnlTop);
             this.Name = "rptBranchSummary";
             this.Text = "Branch Summary";
-            this.pnlBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            this.pnlBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlBottom;
-        private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.DataGridView grdData;
+
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpFrom;
@@ -288,5 +284,11 @@
         private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.TextBox txtBranches;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel pnlBottom;
+        private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.DataGridView grdData;
     }
 }
